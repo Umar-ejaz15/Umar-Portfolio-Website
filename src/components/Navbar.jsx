@@ -19,15 +19,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-zinc-900 p-4 shadow-lg relative">
+    <nav className="w-full bg-white text-black mb-10 p-4 shadow-lg relative">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-white tracking-tighter text-2xl sm:text-3xl font-bold hover:text-zinc-600 transition duration-300">
+        <Link to="/" className=" tracking-tighter text-2xl sm:text-3xl font-bold hover:text-zinc-600 transition duration-300">
           Umar Mern Stack
         </Link>
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none z-50 relative hover:text-zinc-600 transition duration-300"
+            className=" focus:outline-none z-50 relative hover:text-zinc-600 transition duration-300"
           >
             <svg
               className="h-6 w-6"
@@ -51,7 +51,7 @@ const Navbar = () => {
             <li key={item}>
               <Link
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                className="text-white hover:text-zinc-600 block text-xl font-semibold transition duration-300"
+                className=" hover:text-zinc-600 block text-xl font-semibold transition duration-300"
                 onClick={() => isMobile && setIsOpen(false)}
               >
                 {item}

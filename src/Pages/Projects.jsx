@@ -108,7 +108,7 @@ const Projects = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-zinc-900 text-white relative flex flex-col min-h-screen">
+      <div className="bg-white text-black relative flex flex-col min-h-screen">
         {ProjectsData.map((item, index) => (
           <React.Fragment key={index}>
             <div onClick={() => handleProjectClick(index)}>

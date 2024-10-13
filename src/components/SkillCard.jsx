@@ -10,7 +10,7 @@ const SkillCard = ({ id, title, description }) => {
       <motion.div
         layoutId={id}
         onClick={() => setSelectedId(id)}
-        className="bg-zinc-800 text-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+        className="bg-red-600 text-white rounded-lg shadow-2xl p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -27,7 +27,7 @@ const SkillCard = ({ id, title, description }) => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-zinc-800 text-white rounded-lg shadow-md p-6 max-w-md"
+              className="bg-red-600 text-white rounded-lg shadow-md p-6 max-w-md"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 50, opacity: 0 }}
@@ -39,7 +39,7 @@ const SkillCard = ({ id, title, description }) => {
               <motion.button
                 onClick={() => setSelectedId(null)}
 
-                className="bg-zinc-700 text-white px-4 py-2 rounded hover:bg-zinc-600 flex items-center"
+                className="bg-red-900 text-white px-4 py-2 rounded hover:bg-red-700 flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

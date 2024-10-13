@@ -33,7 +33,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="contact-container overflow-hidden bg-zinc-900 min-h-screen flex flex-col items-center">
+    <div className="contact-container overflow-hidden bg-white text-black min-h-screen flex flex-col items-center">
       <Navbar />
       <div className="w-full h-auto flex justify-center items-center mx-auto mt-8 px-4 sm:px-2 lg:px-4">
         <Swiper
@@ -53,7 +53,7 @@ const Contact = () => {
         >
           {contactData.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="contact-card h-full flex flex-col justify-center items-center bg-zinc-800 text-white p-3 rounded-lg shadow-md">
+              <div className="contact-card h-full flex flex-col justify-center items-center bg-gradient-to-r from-violet-600 to-blue-600 text-white p-3 rounded-lg shadow-2xl">
                 <div className="icon text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-sm text-center">{item.content}</p>

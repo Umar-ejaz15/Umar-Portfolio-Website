@@ -39,7 +39,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="bg-zinc-900 min-h-screen text-white">
+    <div className="bg-white min-h-screen text-black">
       <Navbar />
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-2xl sm:text-3xl font-bold mb-6">My MERN Stack Skills</h1>

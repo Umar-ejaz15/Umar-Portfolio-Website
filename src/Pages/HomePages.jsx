@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import Navbar from "../components/Navbar";
+
 import {
   motion,
   AnimatePresence,
@@ -7,7 +8,6 @@ import {
   useTransform,
 } from "framer-motion";
 import { FaCode, FaServer, FaPaintBrush, FaReact } from "react-icons/fa";
-import Buttons from "../components/Buttons";
 import { Link } from "react-router-dom";
 
 const HomePages = () => {
@@ -51,17 +51,17 @@ const HomePages = () => {
   return (
     <>
       <div
-        className="bg-zinc-900 text-white min-w-full min-h-screen overflow-hidden"
+        className="bg-white text-black min-w-full min-h-screen shadow-2xl overflow-hidden"
         ref={containerRef}
       >
         <Navbar />
         <motion.div
-          className="container mx-auto px-4 py-8 sm:py-16 flex flex-col items-center justify-center overflow-hidden"
+          className="container mx-auto px-4 py-8 sm:py-16 flex flex-col items-center justify-center  overflow-hidden"
           style={{ x }}
         >
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4">
-              Hi, I'm Umar
+          <div className="text-center ">
+            <h1 className="text-4xl e sm:text-6xl md:text-8xl font-bold mb-4">
+              Hi, I'm <span className=" font-black text-rose-600 ">Umar</span>
             </h1>
             <AnimatePresence mode="wait">
               <motion.div
@@ -81,10 +81,20 @@ const HomePages = () => {
             <p className="mt-4 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
               {roleDescription[currentRoleIndex]}
             </p>
+            <div>
+              <Link to="/projects" className="mt-4">
+                <button className=" px-10 py-3 bg-gradient-to-r from-blue-600 to-violet-600 rounded-lg text-white mt-4  hover:text-white hover:from-violet-700 hover:to-blue-700  ">
+                  <a href="">View My Projects</a>
+                </button>
+              </Link>
+              <p className="m-2">or</p>
 
-            <Link to="/projects" className="mt-4">
-              <Buttons txt="view my projects" />
-            </Link>
+              <button className="px-10 py-3 bg-gradient-to-r from-violet-600 to-blue-600 rounded-lg text-white   hover:text-white hover:from-blue-700 hover:to-violet-700  ">
+                <a href="/public/Umar Ejaz Resume.pdf" target="_blank">
+                  Download My CV
+                </a>
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -24,7 +24,7 @@ const ShowProject = () => {
   };
 
   return (
-    <div className="bg-zinc-900 min-h-screen text-white">
+    <div className="bg-white min-h-screen text-black">
       <Navbar />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -36,7 +36,7 @@ const ShowProject = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-center"
+          className="text-3xl sm:text-4xl md:text-6xl text-violet-700 underline font-bold mb-4 sm:mb-6 md:mb-8 text-center"
         >
           {projectData.title}
         </motion.h1>
@@ -99,7 +99,7 @@ const ShowProject = () => {
             href={projectData.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-blue-400 hover:text-blue-300 transition duration-300 text-base sm:text-lg md:text-xl break-all"
+            className="inline-block text-blue-900 hover:text-black  transition duration-300 text-base sm:text-lg md:text-xl break-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
