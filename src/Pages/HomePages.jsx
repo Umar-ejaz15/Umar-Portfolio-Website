@@ -11,27 +11,6 @@ import Buttons from "../components/Buttons";
 import { Link } from "react-router-dom";
 
 const HomePages = () => {
-  const ImgData = useMemo(
-    () => [
-      {
-        url: "/src/assets/WhatsApp Image 2024-10-12 at 03.22.42_282b99e1.jpg",
-        top: "10%",
-        left: "10%",
-      },
-      {
-        url: "/src/assets/WhatsApp Image 2024-10-12 at 03.27.19_18f00592.jpg",
-        top: "30%",
-        left: "80%",
-      },
-      {
-        url: "/src/assets/WhatsApp Image 2024-10-12 at 11.57.54_bf2704da.jpg",
-        top: "60%",
-        left: "20%",
-      },
-    ],
-    []
-  );
-
   const roles = useMemo(
     () => [
       { title: "Frontend Developer", icon: <FaCode /> },
@@ -108,36 +87,6 @@ const HomePages = () => {
             </Link>
           </div>
         </motion.div>
-        {ImgData.map((img, index) => (
-          <motion.div
-            key={index}
-            className="overflow-hidden absolute"
-            drag
-            dragConstraints={containerRef}
-            dragElastic={0.05}
-            whileDrag={{ scale: 1.1 }}
-            whileHover={{ scale: 1.05 }}
-            style={{
-              top: img.top,
-              left: img.left,
-              cursor: "grab",
-            }}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20,
-            }}
-          >
-            <motion.img
-              src={img.url}
-              alt={`Image ${index + 1}`}
-              className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 object-cover object-center rounded-full shadow-lg"
-              style={{ pointerEvents: "none" }}
-            />
-          </motion.div>
-        ))}
       </div>
     </>
   );
