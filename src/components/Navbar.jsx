@@ -46,12 +46,12 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <ul className={`${isMobile ? (isOpen ? 'fixed inset-0 bg-gradient-to-b from-zinc-800 to-gray-900 bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6' : 'hidden') : 'flex space-x-6'}`}>
+        <ul className={`${isMobile ? (isOpen ? 'fixed inset-0 bg-white text-black bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6' : 'hidden') : 'flex space-x-6'}`}>
           {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
             <li key={item}>
               <Link
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                className=" hover:text-zinc-600 block text-xl font-semibold transition duration-300"
+                className=" hover:text-zinc-600 block text-xl font-semibold transition duration-500"
                 onClick={() => isMobile && setIsOpen(false)}
               >
                 {item}
