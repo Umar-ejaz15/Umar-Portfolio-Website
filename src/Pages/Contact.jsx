@@ -17,7 +17,7 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: "Email",
-      content: "umar.developer.mern.com",
+      content: "umar.developer.mern@gmail.com",
     },
     { icon: <FaPhone />, title: "Phone", content: "+92-316-7151733" },
     {
