@@ -90,7 +90,7 @@ const HomePages = () => {
               <p className="m-2">or</p>
 
               <button className="px-10 py-3 bg-gradient-to-r from-violet-600 to-blue-600 rounded-lg text-white   hover:text-white hover:from-blue-700 hover:to-violet-700  ">
-                <Link to="/public/Umar Ejaz Resume.pdf">
+                <Link to="/Umar Ejaz Resume.pdf">
                   <a href="" target="_blank">
                     Download My CV
                   </a>
