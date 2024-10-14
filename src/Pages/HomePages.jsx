@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { FaCode, FaServer, FaPaintBrush, FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { log } from "three/webgpu";
 
 const HomePages = () => {
   const roles = useMemo(
@@ -47,6 +48,33 @@ const HomePages = () => {
     ],
     []
   );
+
+  const getMyCV = async () => {
+    try {
+      const response = await fetch(
+        "https://umarmernstack.vercel.app/Umar%20Ejaz%20Resume.pdf"
+      );
+
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error("Failed to fetch the CV");
+      }
+
+      // Create a blob from the response
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+
+      // Create a link element, set its download attribute, and click it to trigger the download
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "Umar Ejaz Resume.pdf"); // Set the download attribute
+      document.body.appendChild(link);
+      link.click(); // Programmatically click the link
+      document.body.removeChild(link); // Remove the link after download
+    } catch (error) {
+      console.error("Error downloading the CV:", error);
+    }
+  };
 
   return (
     <>
@@ -89,12 +117,17 @@ const HomePages = () => {
               </Link>
               <p className="m-2">or</p>
 
-              <button className="px-10 py-3 bg-gradient-to-r from-violet-600 to-blue-600 rounded-lg text-white   hover:text-white hover:from-blue-700 hover:to-violet-700  ">
-                <Link to="/Umar Ejaz Resume.pdf">
-                  <a href="" target="_blank">
-                    Download My CV
-                  </a>
-                </Link>
+              <button
+                className="px-10 py-3 bg-gradient-to-r from-violet-600 to-blue-600 rounded-lg text-white hover:text-white hover:from-blue-700 hover:to-violet-700"
+                onClick={getMyCV}
+              >
+                <a
+                  href="https://umarmernstack.vercel.app/Umar%20Ejaz%20Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download My CV
+                </a>
               </button>
             </div>
           </div>
