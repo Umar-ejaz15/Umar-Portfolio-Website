@@ -5,22 +5,23 @@ import AppRoutes from "./components/AppRoutes";
 import Navbar from "./components/Navbar";
 import HomePages from "./Pages/HomePages";
 import About from "./Pages/About";
-import LocomotiveScroll from 'locomotive-scroll';
+import LocomotiveScroll from "locomotive-scroll";
 import MouseFollow from "./components/MouseFollow";
-
-
+import Designs from "./Pages/Designs";
+import Projects from "./Pages/Projects";
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
   return (
     <>
       <div className="w-full h-full text-black ">
-        <MouseFollow/>
+        <MouseFollow />
         <Navbar />
         {/* <AppRoutes /> */}
         <HomePages />
         <About />
-
+        <Designs />
+        <Projects />
         <Analytics />
       </div>
     </>
