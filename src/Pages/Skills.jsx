@@ -36,28 +36,28 @@ const Skills = () => {
   };
 
   const skills = [
-    { name: "HTML5", icon: <FaHtml5 className="text-3xl" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-3xl" /> },
-    { name: "JavaScript", icon: <FaJs className="text-3xl" /> },
-    { name: "React.js", icon: <FaReact className="text-3xl" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-3xl" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-3xl" /> },
-    { name: "Express.js", icon: <SiExpress className="text-3xl" /> },
-    { name: "Mongoose", icon: <SiMongoose className="text-3xl" /> },
+    { name: "HTML5", icon: <FaHtml5 className="text-lg md:text-xl lg:text-2xl" /> },
+    { name: "CSS3", icon: <FaCss3Alt className="text-lg md:text-xl lg:text-2xl" /> },
+    { name: "JavaScript", icon: <FaJs className="text-lg md:text-xl lg:text-2xl" /> },
+    { name: "React.js", icon: <FaReact className="text-lg md:text-xl lg:text-2xl" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-lg md:text-xl lg:text-2xl" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-lg md:text-xl lg:text-2xl" /> },
+    { name: "Express.js", icon: <SiExpress className="text-lg md:text-xl lg:text-2xl" /> },
+    { name: "Mongoose", icon: <SiMongoose className="text-lg md:text-xl lg:text-2xl" /> },
   ];
-  const radius = 250;
+  const radius = window.innerWidth < 640 ? 130 : window.innerWidth < 1024 ? 180 : 220;
   const totalSkills = skills.length;
 
   return (
-    <div className="w-full h-screen relative bg-black ">
+    <div className="w-full h-screen relative bg-black">
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative">
-          <div className="flex gap-5">
-            <div className="relative w-56 h-56 bg-white rounded-full flex items-center justify-center">
+        <div className="relative scale-90 md:scale-95 lg:scale-100">
+          <div className="flex gap-2 md:gap-3 lg:gap-4">
+            <div className="relative w-28 h-28 md:w-36 md:h-36 lg:w-48 lg:h-48 bg-white rounded-full flex items-center justify-center">
               <div
-                className="relative w-20 h-20 bg-gray-950 rounded-full flex items-center justify-center"
+                className="relative w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gray-950 rounded-full flex items-center justify-center"
                 style={calculateEyePosition(
-                  document.querySelector(".w-56")?.getBoundingClientRect() || {
+                  document.querySelector(".w-28")?.getBoundingClientRect() || {
                     left: 0,
                     top: 0,
                     width: 0,
@@ -68,11 +68,9 @@ const Skills = () => {
                 )}
               >
                 <div
-                  className="w-8 h-8 bg-black rounded-full flex items-center justify-center"
+                  className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 bg-black rounded-full flex items-center justify-center"
                   style={calculateEyePosition(
-                    document
-                      .querySelector(".w-56")
-                      ?.getBoundingClientRect() || {
+                    document.querySelector(".w-28")?.getBoundingClientRect() || {
                       left: 0,
                       top: 0,
                       width: 0,
@@ -83,11 +81,9 @@ const Skills = () => {
                   )}
                 >
                   <div
-                    className="w-4 h-4 bg-white rounded-full transition-all duration-75"
+                    className="w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 bg-white rounded-full transition-all duration-75"
                     style={calculateEyePosition(
-                      document
-                        .querySelector(".w-56")
-                        ?.getBoundingClientRect() || {
+                      document.querySelector(".w-28")?.getBoundingClientRect() || {
                         left: 0,
                         top: 0,
                         width: 0,
@@ -100,13 +96,11 @@ const Skills = () => {
                 </div>
               </div>
             </div>
-            <div className="relative w-56 h-56 bg-white rounded-full flex items-center justify-center">
+            <div className="relative w-28 h-28 md:w-36 md:h-36 lg:w-48 lg:h-48 bg-white rounded-full flex items-center justify-center">
               <div
-                className="relative w-20 h-20 bg-gray-950 rounded-full flex items-center justify-center"
+                className="relative w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gray-950 rounded-full flex items-center justify-center"
                 style={calculateEyePosition(
-                  document
-                    .querySelectorAll(".w-56")[1]
-                    ?.getBoundingClientRect() || {
+                  document.querySelectorAll(".w-28")[1]?.getBoundingClientRect() || {
                     left: 0,
                     top: 0,
                     width: 0,
@@ -117,11 +111,9 @@ const Skills = () => {
                 )}
               >
                 <div
-                  className="w-8 h-8 bg-black rounded-full flex items-center justify-center"
+                  className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 bg-black rounded-full flex items-center justify-center"
                   style={calculateEyePosition(
-                    document
-                      .querySelectorAll(".w-56")[1]
-                      ?.getBoundingClientRect() || {
+                    document.querySelectorAll(".w-28")[1]?.getBoundingClientRect() || {
                       left: 0,
                       top: 0,
                       width: 0,
@@ -132,11 +124,9 @@ const Skills = () => {
                   )}
                 >
                   <div
-                    className="w-4 h-4 bg-white rounded-full transition-all duration-75"
+                    className="w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 bg-white rounded-full transition-all duration-75"
                     style={calculateEyePosition(
-                      document
-                        .querySelectorAll(".w-56")[1]
-                        ?.getBoundingClientRect() || {
+                      document.querySelectorAll(".w-28")[1]?.getBoundingClientRect() || {
                         left: 0,
                         top: 0,
                         width: 0,
@@ -158,10 +148,10 @@ const Skills = () => {
               return (
                 <motion.div
                   key={index}
-                  className="absolute px-6 py-3 bg-gradient-to-tl from-blue-500  text-white  rounded-full hover:bg-gray-700 hover:scale-116 hover:rotate-12 
+                  className="absolute px-2 md:px-3 lg:px-4 py-1.5 md:py-2 lg:py-2.5 bg-gradient-to-tl from-blue-500 text-white rounded-full hover:bg-gray-700 hover:scale-110 hover:rotate-12 
                   transition-all duration-200 ease-in-out
-                 -translate-x-1/2 -translate-y-1/2
-                  flex items-center gap-3 text-lg"
+                  -translate-x-1/2 -translate-y-1/2
+                  flex items-center gap-1.5 md:gap-2 lg:gap-2.5 text-xs md:text-sm lg:text-base"
                   style={{
                     left: `calc(50% + ${x}px)`,
                     top: `calc(50% + ${y}px)`,
