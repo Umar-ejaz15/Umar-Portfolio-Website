@@ -36,7 +36,7 @@ const Projects = () => {
           <SwiperSlide>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
-                src="../../public/Refokuss/2.png"
+                src="../..//Refokuss/2.png"
                 alt="Project 1"
                 className="w-full h-48 sm:h-64 md:h-96 object-cover"
               />
@@ -55,7 +55,7 @@ const Projects = () => {
           <SwiperSlide>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
-                src="../../public/Netflix Movie Data/3.png"
+                src="../..//Netflix Movie Data/3.png"
                 alt="Project 2"
                 className="w-full h-48 sm:h-64 md:h-96 object-cover"
               />
@@ -72,7 +72,7 @@ const Projects = () => {
           <SwiperSlide>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
-                src="../../public/Estore/3.jpeg"
+                src="../..//Estore/3.jpeg"
                 alt="Project 3"
                 className="w-full h-48 sm:h-64 md:h-96 object-cover"
               />
