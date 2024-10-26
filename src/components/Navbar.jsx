@@ -67,7 +67,7 @@ const Navbar = () => {
   };
 
   const handleResumeClick = () => {
-    window.open('../../public/Umar Ejaz Resume.pdf', '_blank');
+    window.open('../..//Umar Ejaz Resume.pdf', '_blank');
   };
 
   return (
