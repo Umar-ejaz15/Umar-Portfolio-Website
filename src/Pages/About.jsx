@@ -153,22 +153,22 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12">
             <div className="relative space-y-4 sm:space-y-6 left-column">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-purple-600">
                 MERN Stack Developer
               </h2>
 
-              <p className="text-sm sm:text-base md:text-lg text-gray-600">
+              <p className="text-sm sm:text-base md:text-lg text-zinc-600">
                 I am a passionate MERN Stack Developer with expertise in
                 building full-stack web applications using MongoDB, Express.js,
                 React.js, and Node.js.
               </p>
 
               <div className="space-y-3 sm:space-y-4">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600">
                   Technical Skills:
                 </h3>
 
-                <ul className="list-disc list-inside text-sm sm:text-base md:text-lg text-gray-600 skill-list">
+                <ul className="list-disc list-inside text-sm sm:text-base md:text-lg text-zinc-600 skill-list">
                   <li className="skill-item mb-1.5 sm:mb-2">
                     MongoDB & Mongoose
                   </li>
@@ -200,14 +200,14 @@ const About = () => {
                     Frontend Development
                   </h3>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-2">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-2">
                     Creating responsive and interactive user interfaces using
                     React.js with modern UI/UX principles. Implementing
                     performant and scalable frontend architectures using best
                     practices and design patterns.
                   </p>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-1">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-1">
                     Expertise in component-based architecture, state management
                     with Redux, and optimization techniques for enhanced web
                     performance and SEO.
@@ -219,13 +219,13 @@ const About = () => {
                     Backend Development
                   </h3>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-2">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-2">
                     Building robust server-side applications with Node.js and
                     Express.js, implementing secure authentication systems and
                     efficient data processing pipelines.
                   </p>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-1">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-1">
                     Developing scalable microservices architecture with load
                     balancing, caching strategies, and performance optimization
                     for high-traffic applications.
@@ -237,13 +237,13 @@ const About = () => {
                     Database Management
                   </h3>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-2">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-2">
                     Designing and managing MongoDB databases with optimized
                     schema design, indexing strategies, and data modeling for
                     maximum efficiency.
                   </p>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-1">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-1">
                     Implementing data security measures, backup solutions, and
                     database optimization techniques for improved query
                     performance and data integrity.
@@ -255,13 +255,13 @@ const About = () => {
                     API Development
                   </h3>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-2">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-2">
                     Creating and integrating RESTful APIs with comprehensive
                     documentation, versioning, and security implementations
                     following industry standards.
                   </p>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-1">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-1">
                     Implementing API rate limiting, caching strategies, and
                     monitoring solutions for optimal performance and
                     reliability.
@@ -273,13 +273,13 @@ const About = () => {
                     Performance Optimization
                   </h3>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-2">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-2">
                     Implementing advanced optimization techniques for web
                     applications, including code splitting, lazy loading, and
                     caching strategies.
                   </p>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-1">
+                  <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-1">
                     Expertise in SEO optimization, web vitals improvement, and
                     performance monitoring for enhanced user experience and
                     search engine rankings.
