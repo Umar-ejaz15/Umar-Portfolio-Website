@@ -19,7 +19,7 @@ const Projects = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text"
+          className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text"
         >
           Featured Projects
         </motion.h2>
@@ -44,165 +44,38 @@ const Projects = () => {
           modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper h-full"
         >
-          <SwiperSlide>
-            <div className="bg-white  flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-              <div className="relative">
-                <img
-                  src="../..//Refokuss/2.png"
-                  alt="Project 1"
-                  className="w-full h-40 sm:h-52 md:h-72 object-cover hover:opacity-90 transition-opacity"
-                />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-30 transition-opacity"></div>
-              </div>
-              <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 hover:text-blue-600 transition-colors">
-                  Refukus Animated Web
-                </h3>
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                  I developed this dynamic website using React.js and Locomotive
-                  Scroll, incorporating smooth animations and interactive
-                  elements to create an engaging user experience.
-                </p>
-                <div className="mt-6 flex gap-4">
-                  <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
-                    React.js
-                  </span>
-                  <span className="px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-medium">
-                    Animation
-                  </span>
+          {/* Project Slides */}
+          {projectsData.map((project, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white flex-shrink-0 rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                <div className="relative">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-32 sm:h-40 md:h-64 lg:h-72 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div className="p-4 sm:p-6 md:p-8 bg-gradient-to-b from-white to-gray-50">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4 text-gray-800 hover:text-blue-600 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="mt-4 sm:mt-6 flex gap-2 sm:gap-4 flex-wrap">
+                    {project.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs sm:text-sm font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-white  flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-              <div className="relative">
-                <img
-                  src="../..///Chess Game/1728209519307.jfif"
-                  alt="Project 1"
-                  className="w-full h-40 sm:h-52 md:h-72 object-cover hover:opacity-90 transition-opacity"
-                />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-30 transition-opacity"></div>
-              </div>
-              <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 hover:text-blue-600 transition-colors">
-                  Chess Game
-                </h3>
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                  Created a real-time chess game using Socket.IO for multiplayer
-                  functionality, Chess.js for game logic and move validation,
-                  and Express.js backend for handling game state and player
-                  interactions.{" "}
-                </p>
-                <div className="mt-6 flex gap-4">
-                  <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
-                    Socket IO
-                  </span>
-                  <span className="px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-medium">
-                    Express
-                  </span>
-                  <span className="px-4 py-2 bg-purple-100 text-yellow-600 rounded-full text-sm font-medium">
-                    Chess JS
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-white  flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-              <div className="relative">
-                <img
-                  src="../..//LocationTracker/1728270655445.jfif"
-                  alt="Project 1"
-                  className="w-full h-40 sm:h-52 md:h-72 object-cover hover:opacity-90 transition-opacity"
-                />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-30 transition-opacity"></div>
-              </div>
-              <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 hover:text-blue-600 transition-colors">
-                  Location tracker app
-                </h3>
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                  I developed this location tracking application using Socket.IO
-                  for real-time communication, and Express.js backend for
-                  handling location data, featuring real-time tracking and an
-                  intuitive user interface.{" "}
-                </p>
-                <div className="mt-6 flex gap-4">
-                  <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
-                    Socket IO
-                  </span>
-                  <span className="px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-medium">
-                    Express JS
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-white flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-              <div className="relative">
-                <img
-                  src="../..//Netflix Movie Data/3.png"
-                  alt="Project 2"
-                  className="w-full h-40 sm:h-52 md:h-72 object-cover hover:opacity-90 transition-opacity"
-                />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-30 transition-opacity"></div>
-              </div>
-              <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 hover:text-blue-600 transition-colors">
-                  Movie APP
-                </h3>
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                  I developed this dynamic movie application using React.js and
-                  integrated the TMDB API to fetch and display comprehensive
-                  movie data, featuring search functionality.
-                </p>
-                <div className="mt-6 flex gap-4">
-                  <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
-                    React.js
-                  </span>
-                  <span className="px-4 py-2 bg-green-100 text-green-600 rounded-full text-sm font-medium">
-                    TMDB API
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-white flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-              <div className="relative">
-                <img
-                  src="../..//Estore/3.jpeg"
-                  alt="Project 3"
-                  className="w-full h-40 sm:h-52 md:h-72 object-cover hover:opacity-90 transition-opacity"
-                />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-30 transition-opacity"></div>
-              </div>
-              <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 hover:text-blue-600 transition-colors">
-                  E-Commerce Store
-                </h3>
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                  I built this full-stack e-commerce store using React.js for
-                  the frontend and Node.js with Express for the backend. The
-                  application features user authentication, product management,
-                  shopping cart functionality.
-                </p>
-                <div className="mt-6 flex gap-4">
-                  <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
-                    React.js
-                  </span>
-                  <span className="px-4 py-2 bg-yellow-100 text-yellow-600 rounded-full text-sm font-medium">
-                    Node.js
-                  </span>
-                  <span className="px-4 py-2 bg-red-100 text-red-600 rounded-full text-sm font-medium">
-                    Express
-                  </span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </motion.div>
       <style jsx>{`
@@ -214,13 +87,13 @@ const Projects = () => {
         .swiper-slide {
           background-position: center;
           background-size: cover;
-          width: 280px;
+          width: 240px;
           height: auto;
           transition: transform 0.3s ease;
         }
         @media (min-width: 640px) {
           .swiper-slide {
-            width: 360px;
+            width: 320px;
           }
           .swiper {
             padding-top: 50px;
@@ -229,8 +102,7 @@ const Projects = () => {
         }
         @media (min-width: 768px) {
           .swiper-slide {
-            width: 440px;
-            height: auto;
+            width: 380px;
           }
           .swiper {
             padding-top: 60px;
@@ -243,21 +115,55 @@ const Projects = () => {
           transition: all 0.3s ease;
         }
         .swiper-pagination-bullet {
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           background: #4f46e5;
           opacity: 0.5;
         }
         .swiper-pagination-bullet-active {
           opacity: 1;
         }
-        .swiper-3d .swiper-slide-shadow-left,
-        .swiper-3d .swiper-slide-shadow-right {
-          background-image: none;
-        }
       `}</style>
     </div>
   );
 };
+
+const projectsData = [
+  {
+    image: "../..//Refokuss/2.png",
+    title: "Refukus Animated Web",
+    description:
+      "A dynamic website with smooth animations and interactive elements created using React.js and Locomotive Scroll.",
+    tags: ["React.js", "Animation"],
+  },
+  {
+    image: "../..///Chess Game/1728209519307.jfif",
+    title: "Chess Game",
+    description:
+      "A real-time chess game using Socket.IO, Chess.js for logic, and Express.js for player interactions.",
+    tags: ["Socket IO", "Express", "Chess JS"],
+  },
+  {
+    image: "../..//LocationTracker/1728270655445.jfif",
+    title: "Location Tracker App",
+    description:
+      "Real-time location tracking app using Socket.IO and Express.js with an intuitive interface.",
+    tags: ["Socket IO", "Express JS"],
+  },
+  {
+    image: "../..//Netflix Movie Data/3.png",
+    title: "Movie App",
+    description:
+      "Dynamic movie app using React.js with TMDB API integration for comprehensive movie data and search functionality.",
+    tags: ["React.js", "TMDB API"],
+  },
+  {
+    image: "../..//Estore/3.jpeg",
+    title: "E-Commerce Store",
+    description:
+      "A full-stack e-commerce store with React.js, Node.js, and Express, featuring user authentication and product management.",
+    tags: ["React.js", "Node.js", "Express"],
+  },
+];
 
 export default Projects;
