@@ -8,23 +8,28 @@ const Designs = () => {
     
     const headings = document.querySelectorAll("h1");
     
-    headings.forEach((heading, index) => {
-      gsap.from(heading, {
-        scrollTrigger: {
-          trigger: heading,
-          start: "top 80%",
-          end: "bottom 100%",
-          scrub: 3,
-          toggleActions: "play none none reverse"
+    headings.forEach((heading) => {
+      gsap.fromTo(heading, 
+        {
+          opacity: 0,
+          y: 100,
+          scale: 0.9,
         },
-        opacity: 0,
-        y: 150,
-        rotation: 5,
-        scale: 0.9,
-        duration: 1.5,
-        ease: "power2.out",
-        delay: index * 0.3
-      });
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: heading,
+            start: "top 80%",
+            end: "top 20%",
+            toggleActions: "play none none reverse",
+            scrub: false,
+          }
+        }
+      );
     });
   }, []);
 

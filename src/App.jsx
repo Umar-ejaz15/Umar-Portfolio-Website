@@ -8,6 +8,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import MouseFollow from "./components/MouseFollow";
 import Designs from "./Pages/Designs";
 import Projects from "./Pages/Projects";
+import Contact from "./Pages/Contact";
 import Skills from "./Pages/Skills";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Designs />
         <Projects />
         <Skills />
+        <Contact />
         <Analytics />
       </div>
     </>

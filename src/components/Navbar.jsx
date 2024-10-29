@@ -90,9 +90,9 @@ const Navbar = () => {
               animate="animate"
               variants={buttonVariants}
               onClick={handleResumeClick}
-              className="text-sm sm:text-base md:text-lg px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-semibold"
+              className="text-sm  sm:text-base md:text-lg px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-semibold"
             >
-              Resume
+              CV
             </motion.button>
           </div>
         </div>
