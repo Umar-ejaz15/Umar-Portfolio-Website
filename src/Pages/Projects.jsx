@@ -45,7 +45,7 @@ const Projects = () => {
           className="mySwiper h-full"
         >
           <SwiperSlide>
-            <div className="bg-white  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
+            <div className="bg-white  flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
               <div className="relative">
                 <img
                   src="../..//Refokuss/2.png"
@@ -75,7 +75,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-white  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
+            <div className="bg-white  flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
               <div className="relative">
                 <img
                   src="../..///Chess Game/1728209519307.jfif"
@@ -96,7 +96,7 @@ const Projects = () => {
                 </p>
                 <div className="mt-6 flex gap-4">
                   <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
-                   Socket IO
+                    Socket IO
                   </span>
                   <span className="px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-medium">
                     Express
@@ -109,7 +109,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-white  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
+            <div className="bg-white  flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
               <div className="relative">
                 <img
                   src="../..//LocationTracker/1728270655445.jfif"
@@ -140,7 +140,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
+            <div className="bg-white flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
               <div className="relative">
                 <img
                   src="../..//Netflix Movie Data/3.png"
@@ -170,7 +170,7 @@ const Projects = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
+            <div className="bg-white flex-shrink-0  rounded-xl shadow-2xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
               <div className="relative">
                 <img
                   src="../..//Estore/3.jpeg"
