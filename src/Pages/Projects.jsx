@@ -72,6 +72,28 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
+                  <div className="mt-4 flex gap-4">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                      >
+                        View Code
+                      </a>
+                    )}
+                    {project.deployedLink && (
+                      <a
+                        href={project.deployedLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -135,13 +157,28 @@ const projectsData = [
     description:
       "A dynamic website with smooth animations and interactive elements created using React.js and Locomotive Scroll.",
     tags: ["React.js", "Animation"],
+    link: "https://github.com/Umar-ejaz15/Refokuss---designs",
+    deployedLink: "https://refokuss-designs.vercel.app/",
   },
   {
-    image: "../..///Chess Game/1728209519307.jfif",
-    title: "Chess Game",
+    image:
+      "../..//FinePpay _ 편리한 편의점 결제 서비스 - Google Chrome 11_16_2024 12_28_24 AM.png",
+    title: "Finpay ",
+    description:
+      "A Responsoive Website for a Finpay, a convenient payment solution for small businesses.",
+    tags: ["Next.js"],
+    link: "https://github.com/Umar-ejaz15/fin-pay/tree/master",
+    deployedLink: "https://fin-pay-psi.vercel.app/",
+  },
+  {
+    image:
+      "../..//Solo Levling _ Top Rated WebToon _ Manhwa - Google Chrome 11_14_2024 10_29_00 AM.png",
+    title: "Solo Leveling Web App",
     description:
       "A real-time chess game using Socket.IO, Chess.js for logic, and Express.js for player interactions.",
-    tags: ["Socket IO", "Express", "Chess JS"],
+    tags: ["Next JS", "Context API"],
+    link: "https://solo-leveling-six.vercel.app/",
+    deployedLink: "https://solo-leveling-six.vercel.app/",
   },
   {
     image: "../..//LocationTracker/1728270655445.jfif",
@@ -149,6 +186,7 @@ const projectsData = [
     description:
       "Real-time location tracking app using Socket.IO and Express.js with an intuitive interface.",
     tags: ["Socket IO", "Express JS"],
+    link: "https://github.com/Umar-ejaz15/Real-Time-Tracker",
   },
   {
     image: "../..//Netflix Movie Data/3.png",
@@ -163,6 +201,7 @@ const projectsData = [
     description:
       "A full-stack e-commerce store with React.js, Node.js, and Express, featuring user authentication and product management.",
     tags: ["React.js", "Node.js", "Express"],
+    link: "https://github.com/Umar-ejaz15/Scatch-store-project",
   },
 ];
 
