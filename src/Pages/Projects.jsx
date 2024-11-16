@@ -200,7 +200,7 @@ const projectsData = [
     title: "E-Commerce Store",
     description:
       "A full-stack e-commerce store with React.js, Node.js, and Express, featuring user authentication and product management.",
-    tags: ["React.js", "Node.js", "Express"],
+    tags: ["Node.js", "Express"],
     link: "https://github.com/Umar-ejaz15/Scatch-store-project",
   },
 ];
