@@ -35,7 +35,6 @@ const App = () => {
           </div>
           <div className="w-full flex flex-col gap-1 lg:w-1/5">
             <Skills />
-            <Certificate/>
           </div>
         </div>
       </div>
