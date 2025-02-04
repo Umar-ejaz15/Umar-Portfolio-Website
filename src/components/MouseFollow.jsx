@@ -27,7 +27,7 @@ const MouseFollow = () => {
           hoveredElement?.tagName === 'BUTTON' ||
           hoveredElement?.tagName === 'INPUT') {
         setIsHoveringText(true)
-        hoveredElement.style.color = '#6366f1'
+        hoveredElement.style.color = '#f472b6'
         hoveredElement.style.transition = 'color 0.3s ease'
       } else {
         setIsHoveringText(false)
@@ -48,7 +48,7 @@ const MouseFollow = () => {
 
   return (
     <div 
-      className="fixed z-50 pointer-events-none select-none rounded-full bg-zinc-800/70 backdrop-blur-sm transform -translate-x-1/2 -translate-y-1/2"
+      className="fixed z-50 pointer-events-none select-none rounded-full bg-white/30 backdrop-blur-sm transform -translate-x-1/2 -translate-y-1/2"
       style={{ 
         left: `${position.x}px`,
         top: `${position.y}px`,
