@@ -28,27 +28,30 @@ const App = () => {
         <meta name="twitter:description" content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development." />
         <link rel="canonical" href="https://your-website-url.com" />
       </Helmet>
-      <div className="w-full min-h-screen px-8 text-white bg-zinc-800">
+      <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800">
+   
         <MouseFollow />
-        <div className="flex flex-col lg:flex-row gap-1">
+        <div className="flex flex-col lg:flex-row gap-3">
           <div className="w-full lg:w-4/5">
-            <div className="mb-1">
+            <div className="mb-3">
               <About />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
               <div className="w-full">
                 <Contact />
               </div>
               <div className="w-full">
                 <Works />
               </div>
-              <div className="w-full">
+              <div className="w-full sm:col-span-2 md:col-span-1">
                 <Side />
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-1 lg:w-1/5">
-            <Skills />
+          <div className="w-full mt-3 lg:mt-0 lg:w-1/5">
+            <div className="flex flex-col gap-3">
+              <Skills />
+            </div>
           </div>
         </div>
       </div>

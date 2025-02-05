@@ -1,22 +1,52 @@
 import React from "react";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="p-2 bg-zinc-900 w-full h-full flex flex-col justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-300">
+    <div className="p-4 md:p-6 lg:p-8 bg-zinc-900 w-full h-full flex flex-col justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-300">
       <div className="flex flex-col gap-8">
-        <h2 className="text-3xl font-bold">Let's start working together!</h2>
-        <div className="flex flex-col gap-2">
-          <h3 className="text-xl font-semibold">Email:</h3>
-          <p className="text-lg break-words">official.umar.ejaz@gmail.com</p>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left">Let's start working together!</h2>
+        
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-3">
+            <FaEnvelope className="text-2xl md:text-3xl text-white" />
+            <h3 className="text-xl md:text-2xl font-semibold">Email:</h3>
+          </div>
+          <a 
+            href="mailto:official.umar.ejaz@gmail.com" 
+            className="text-lg md:text-xl break-words hover:text-blue-400 transition-colors duration-300"
+          >
+            official.umar.ejaz@gmail.com
+          </a>
         </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="text-xl font-semibold">Socials:</h3>
-          <ul className="flex flex-col gap-2">
+
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-3">
+            <div className="text-2xl md:text-3xl">🌐</div>
+            <h3 className="text-xl md:text-2xl font-semibold">Socials:</h3>
+          </div>
+          <ul className="flex flex-col md:flex-row gap-4 md:gap-6">
             <li>
-              <a href="https://linkedin.com" className="text-lg hover:underline">LinkedIn</a>
+              <a 
+                href="https://linkedin.com" 
+                className="flex items-center gap-2 text-lg md:text-xl hover:text-blue-400 transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="text-2xl" />
+                LinkedIn
+              </a>
             </li>
             <li>
-              <a href="https://github.com" className="text-lg hover:underline">Github</a>
+              <a 
+                href="https://github.com" 
+                className="flex items-center gap-2 text-lg md:text-xl hover:text-gray-400 transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="text-2xl" />
+                Github
+              </a>
             </li>
           </ul>
         </div>

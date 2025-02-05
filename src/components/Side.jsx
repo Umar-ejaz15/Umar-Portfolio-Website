@@ -1,39 +1,46 @@
 import React from "react";
+import { FaSpinner, FaBriefcase, FaProjectDiagram, FaGithub, FaLinkedin, FaCode, FaDownload } from "react-icons/fa";
 
 const Side = () => {
   return (
-    <div className="flex flex-col gap-2 h-full">
-      <div className="p-2 font-bold bg-zinc-900 w-full h-auto items-center flex flex-col justify-between hover:border-[2px] hover:border-white text-center text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300">
-        Projects!
+    <div className="flex flex-col gap-4 h-full">
+      <div className="p-4 font-bold bg-zinc-900 w-full h-auto items-center flex gap-2 justify-center hover:border-[2px] hover:border-white text-center text-xl sm:text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300 cursor-pointer">
+        <FaProjectDiagram className="text-blue-500" />
+        <span>Projects</span>
       </div>
-      <div className="p-8 bg-zinc-900 w-full h-full flex flex-col justify-between  gap-7  hover:border-[2px] hover:border-white text-center items-center text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300">
-        <div className="flex justify-between w-full">
-          <h1>Now</h1>
-          <div className="animate-spin text-green-500 text-2xl">
-            <svg
-              className="w-8 h-8"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              ></circle>
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              ></path>
-            </svg>
+      <div className="p-4 sm:p-8 bg-zinc-900 w-full h-full flex flex-col  gap-5 sm:gap-7 hover:border-[2px] hover:border-white text-center items-center text-xl sm:text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300">
+        <div className="flex items-center justify-between w-full">
+          <h1 className="flex items-center gap-2">
+            <FaCode className="text-purple-500" />
+            <span>Currently Active</span>
+          </h1>
+          <FaSpinner className="animate-spin text-green-500 w-6 h-6 sm:w-8 sm:h-8" />
+        </div>
+        <div className="w-full space-y-4">
+          <div>
+            <h1 className="text-left text-lg sm:text-xl text-white/80 mb-2 flex items-center gap-2">
+              <FaBriefcase className="text-yellow-500" />
+              Professional Status
+            </h1>
+            <p className="text-left text-sm sm:text-base text-white/70">
+              Full Stack Developer | Open to Opportunities
+            </p>
           </div>
-        </div>{" "}
-        <div><h1 className="text-left text-xl text-white/80 ">What's That</h1>
-        <p className="text-left">Currently working as freelancer</p></div>
+          <div className="flex flex-wrap gap-3">
+            <a href="#" className="flex items-center gap-2 bg-zinc-800 px-4 py-2 rounded-lg hover:bg-zinc-700 transition-all duration-300">
+              <FaGithub className="text-white" />
+              <span className="text-sm">GitHub</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 bg-zinc-800 px-4 py-2 rounded-lg hover:bg-zinc-700 transition-all duration-300">
+              <FaLinkedin className="text-blue-400" />
+              <span className="text-sm">LinkedIn</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 bg-zinc-800 px-4 py-2 rounded-lg hover:bg-zinc-700 transition-all duration-300">
+              <FaDownload className="text-green-400" />
+              <span className="text-sm">Resume</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
