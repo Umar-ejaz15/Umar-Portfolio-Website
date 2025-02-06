@@ -10,12 +10,12 @@ const Works = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-4 h-full ">
-      <div className="p-3 bg-zinc-900 w-full text-center text-xl md:text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white">
+    <div className="flex flex-col gap-2 h-full ">
+      <div className="p-2 bg-zinc-900 w-full text-center text-xl md:text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white">
         {new Date().toLocaleTimeString()}
       </div>
-      <div className="p-4 md:p-8 bg-zinc-900 w-full h-full border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white">
-        <h1 className="text-2xl md:text-3xl font-bold mb-8">What I Do</h1>
+      <div className="p-4 md:p-2 bg-zinc-900 w-full h-full border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white">
+        <h1 className="text-2xl md:text-xl font-bold mb-2">What I Do</h1>
         <div className="grid grid-row-1 sm:grid-rows-2 lg:grid-rows-4 gap-6">
           {services.map((service, index) => (
             <div
@@ -25,7 +25,7 @@ const Works = () => {
               <div className="text-4xl md:text-xl text-white">
                 {service.icon}
               </div>
-              <h2 className="text-lg md:text-[20px] font-semibold">{service.title}</h2>
+              <h2 className="text-lg md:text-sm font-semibold">{service.title}</h2>
             </div>
           ))}
         </div>

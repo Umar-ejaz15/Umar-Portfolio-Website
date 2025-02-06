@@ -27,14 +27,8 @@ const MouseFollow = () => {
           hoveredElement?.tagName === 'BUTTON' ||
           hoveredElement?.tagName === 'INPUT') {
         setIsHoveringText(true)
-        hoveredElement.style.color = '#f472b6'
-        hoveredElement.style.transition = 'color 0.3s ease'
       } else {
         setIsHoveringText(false)
-        document.querySelectorAll('p, h1, h2, h3, span, a, button, input').forEach(el => {
-          el.style.color = ''
-          el.style.transition = 'color 0.3s ease'
-        })
       }
     }
 

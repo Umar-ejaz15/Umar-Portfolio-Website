@@ -3,6 +3,7 @@ import "../src/App.css";
 import { Analytics } from "@vercel/analytics/react";
 import LocomotiveScroll from "locomotive-scroll";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 import MouseFollow from "./components/MouseFollow";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -28,29 +29,58 @@ const App = () => {
         <meta name="twitter:description" content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development." />
         <link rel="canonical" href="https://your-website-url.com" />
       </Helmet>
-      <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800">
+      <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-zinc-950">
    
         <MouseFollow />
         <div className="flex flex-col lg:flex-row gap-3">
-          <div className="w-full lg:w-4/5">
-            <div className="mb-3">
+          <div className="w-full lg:w-[75%]">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-3">
               <About />
-            </div>
+            </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-              <div className="w-full">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="w-full">
                 <Contact />
-              </div>
-              <div className="w-full">
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="w-full">
                 <Works />
-              </div>
-              <div className="w-full sm:col-span-2 md:col-span-1">
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="w-full sm:col-span-2 md:col-span-1">
                 <Side />
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div className="w-full mt-3 lg:mt-0 lg:w-1/5">
+          <div className="w-full mt-3 lg:mt-0 lg:w-[25%]">
             <div className="flex flex-col gap-3">
-              <Skills />
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+              >
+                <Skills />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 1 }}
+              >
+                <Certificate />
+              </motion.div>
             </div>
           </div>
         </div>
