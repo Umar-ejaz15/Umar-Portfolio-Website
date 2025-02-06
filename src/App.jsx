@@ -30,7 +30,7 @@ const App = () => {
         <link rel="canonical" href="https://your-website-url.com" />
       </Helmet>
       <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-zinc-950">
-   
+      <Analytics/>
         <MouseFollow />
         <div className="flex flex-col lg:flex-row gap-3">
           <div className="w-full lg:w-[75%]">
