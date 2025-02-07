@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaDatabase, FaNodeJs, FaReact, FaAws, FaGitAlt, FaCode, FaLaptopCode, FaGamepad, FaBook } from 'react-icons/fa'
-import { SiExpress, SiTypescript, SiGraphql, SiJavascript, SiMongodb } from 'react-icons/si'
+import { FaDatabase, FaNodeJs, FaReact, FaGitAlt, FaCode, FaLaptopCode, FaGamepad, FaBook, FaGithub, FaFigma } from 'react-icons/fa'
+import { SiExpress, SiTypescript, SiJavascript, SiMongodb, SiTailwindcss, SiBootstrap, SiRedux, SiPostman, SiNetlify, SiVercel, SiFramer, SiMongoose } from 'react-icons/si'
 
 const Skills = () => {
   return (
@@ -13,7 +13,7 @@ const Skills = () => {
         <div className="bg-zinc-800/50 p-4 rounded-lg">
           <p className="text-sm md:text-xs text-gray-300 hover:text-white transition-colors leading-relaxed">
             <FaLaptopCode className="inline-block mr-2 text-blue-400" />
-            Hi, I'm Umar, a MERN stack developer from Pakistan specializing in full-stack web development.
+            Hi, I'm Umar, a passionate Full Stack Developer from Pakistan with expertise in modern web technologies. I specialize in creating responsive, performant, and user-friendly applications using the MERN stack and latest frontend technologies.
           </p>
         </div>
 
@@ -22,9 +22,12 @@ const Skills = () => {
             <FaNodeJs className="text-green-500 animate-bounce" />
             Technical Skills
           </h3>
-          <ul className="grid grid-rows-2 md:rows-rows-3 lg:grid-rows-4 gap-2">
+          <ul className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-2">
             <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
               <SiMongodb className="text-green-500 text-xl" />MongoDB
+            </li>
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <SiMongoose className="text-red-500 text-xl" />Mongoose
             </li>
             <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
               <SiExpress className="text-white text-xl" />Express.js
@@ -39,32 +42,48 @@ const Skills = () => {
               <SiJavascript className="text-yellow-400 text-xl" />JavaScript
             </li>
             <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
-              <SiTypescript className="text-blue-500 text-xl" />TypeScript
+              <SiTailwindcss className="text-cyan-400 text-xl" />Tailwind CSS
             </li>
             <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
-              <FaDatabase className="text-purple-500 text-xl" />REST APIs
+              <SiBootstrap className="text-purple-500 text-xl" />Bootstrap
             </li>
-            {/* <li className="text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
-              <SiGraphql className="text-pink-500 text-xl" />GraphQL
-            </li> */}
+          
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <SiFramer className="text-purple-400 text-xl" />Framer Motion
+            </li>
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <SiRedux className="text-purple-500 text-xl" />Redux Toolkit
+            </li>
             <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
               <FaGitAlt className="text-orange-500 text-xl" />Git
             </li>
-            {/* <li className="text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
-              <FaAws className="text-yellow-500 text-xl" />AWS
-            </li> */}
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <FaGithub className="text-white text-xl" />GitHub
+            </li>
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <SiNetlify className="text-cyan-400 text-xl" />Netlify
+            </li>
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <SiVercel className="text-white text-xl" />Vercel
+            </li>
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <SiPostman className="text-orange-500 text-xl" />Postman
+            </li>
+            <li className="text-sm text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
+              <FaFigma className="text-purple-400 text-xl" />Figma
+            </li>
           </ul>
         </div>
 
         <div className="bg-zinc-800/50 p-4 rounded-lg mt-auto">
           <h3 className="text-lg md:text-xl font-semibold mb-4 text-white flex items-center gap-3">
             <FaGamepad className="text-purple-400 animate-bounce" />
-            Interests & Hobbies
+            Passion & Expertise
           </h3>
           <div className="flex items-start gap-4 flex-wrap">
-            <FaBook className="text-green-400 text-2xl mt-1" />
             <p className="text-sm md:text-sm text-gray-300 leading-relaxed hover:text-white transition-colors flex-1">
-              Beyond coding, I'm passionate about building scalable web applications and solving complex problems. I enjoy working with databases, optimizing performance, and implementing secure authentication systems. In my free time, I contribute to open-source projects and stay updated with the latest web development trends.
+            {/* <FaBook className="text-green-400 text-2xl mt-1" /> */}
+              I'm deeply passionate about crafting exceptional web experiences that combine stunning design with robust functionality. My expertise spans from creating smooth animations using GSAP and Framer Motion to building scalable backend systems with Node.js and MongoDB. I excel in developing responsive interfaces with Tailwind CSS and Bootstrap, implementing state management with Redux Toolkit, and ensuring seamless deployment through Netlify and Vercel. I'm constantly exploring new technologies and best practices to deliver innovative solutions that exceed expectations.
             </p>
           </div>
         </div>

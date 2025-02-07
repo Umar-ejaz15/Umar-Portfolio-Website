@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaLaptopCode, FaUserNinja, FaReact, FaJs } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaLaptopCode, FaUserNinja, FaReact, FaJs, FaDatabase, FaServer, FaBrain } from "react-icons/fa";
 import Buttons from "./Buttons";
 
 const About = () => {
@@ -11,25 +11,34 @@ const About = () => {
             
             <h1 className="text-white/60 flex items-center gap-2 flex-wrap">
               <span className="animate-wave">👋</span> 
-              <span className="hover:text-blue-400 transition-all duration-300">Welcome to my digital space</span>
+              <span className="hover:text-blue-400 transition-all duration-300">Welcome to my digital playground</span>
               <FaCode className="text-blue-400 animate-pulse" />
             </h1>
             <p className="my-2 sm:my-4 flex items-center gap-2 flex-wrap">
               <FaUserNinja className="text-green-400" />
               Hi, I'm <strong className="text-bold uppercase hover:text-blue-400 transition-colors">Umar Ejaz</strong>
               , a passionate software developer with a keen eye for creating engaging user experiences,
-              smooth animations, and delightful micro interactions.
+              smooth animations, and delightful micro interactions. I transform ideas into elegant, efficient code
+              that makes a difference.
               <FaLaptopCode className="text-yellow-400 animate-bounce" />
             </p>
             <div className="flex items-center gap-2 mb-2 sm:mb-4 flex-wrap">
               <FaReact className="text-blue-400 animate-spin" />
               <FaJs className="text-yellow-400" />
-              <span className="text-gray-300">Primary tech stack</span>
+              <FaDatabase className="text-purple-400" />
+              <FaServer className="text-green-400" />
+              <span className="text-gray-300">Full-stack development expertise</span>
             </div>
+            <p className="mb-2 sm:mb-4 flex items-center gap-2 flex-wrap text-gray-300">
+              <FaBrain className="text-pink-400 animate-pulse" />
+              Specializing in modern web technologies, responsive design, and scalable architecture.
+              Always learning and exploring new technologies to stay at the cutting edge.
+            </p>
             <p className="mb-4 sm:mb-6 hover:text-blue-300 transition-all duration-300 flex items-center gap-2 flex-wrap">
               <FaEnvelope className="text-red-400" />
               I'm always excited to collaborate on innovative projects or just engage in tech discussions.
-              Let's create something amazing together!
+              Let's create something amazing together! Whether it's a complex web application or an elegant solution,
+              I'm ready to bring your vision to life.
             </p>
            
           </div>

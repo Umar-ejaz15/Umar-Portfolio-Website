@@ -4,7 +4,7 @@ import { MdEmail, MdCalendarToday } from "react-icons/md";
 
 const Buttons = () => {
   return (
-    <div className="abtbtn flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 p-4">
+    <div className="abtbtn  flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 ">
       <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
         <div className="relative group transform hover:scale-105 transition-all">
           <div className="absolute -inset-0.5 bg-blue-600 rounded-md blur-sm opacity-75 group-hover:opacity-100 transition-all"></div>
