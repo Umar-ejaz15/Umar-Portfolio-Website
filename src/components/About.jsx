@@ -7,7 +7,7 @@ const About = () => {
     <div className="px-2 bg-zinc-900 w-full h-[50%] flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-1000">
       <div className="flex flex-col lg:flex-row justify-between items-center w-full p-2 sm:p-4 gap-4 sm:gap-8">
         <div className="abt1 w-full lg:w-2/3 flex gap-4 sm:gap-8 lg:gap-16 flex-col">
-          <div className="abttext text-sm sm:text-base lg:text-sm">
+          <div className="abttext text-sm sm:text-sm lg:text-xs">
             
             <h1 className="text-white/60 flex items-center gap-2 flex-wrap">
               <span className="animate-wave">👋</span> 
