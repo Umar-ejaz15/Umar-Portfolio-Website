@@ -6,7 +6,7 @@ const Side = () => {
     window.open("../../Umar Ejaz Resume.pdf","_blank")
   }
   return (
-    <div className="flex flex-col gap-4 h-full">
+    <div className="flex flex-col gap-2 h-full">
       <div className="p-3 font-bold bg-zinc-900 w-full h-auto items-center flex gap-3 justify-between hover:border-[2px] hover:border-white text-center text-xl sm:text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300 cursor-pointer hover:bg-zinc-800">
         <FaLaptopCode className="text-emerald-500 text-xl" />
         <span className="text-sm"> Portfolio Projects</span>

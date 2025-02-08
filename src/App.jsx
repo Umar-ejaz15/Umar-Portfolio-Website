@@ -32,16 +32,16 @@ const App = () => {
       <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-zinc-950">
       <Analytics/>
         <MouseFollow />
-        <div className="flex flex-col lg:flex-row gap-3">
+        <div className="flex flex-col lg:flex-row gap-2 h-full">
           <div className="w-full lg:w-[75%]">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-3">
+              className="mb-1">
               <About />
             </motion.div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -65,8 +65,8 @@ const App = () => {
               </motion.div>
             </div>
           </div>
-          <div className="w-full mt-3 lg:mt-0 lg:w-[25%]">
-            <div className="flex flex-col gap-3">
+          <div className="w-full mt-1 lg:mt-0 lg:w-[25%]">
+            <div className="flex flex-col gap-2">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
