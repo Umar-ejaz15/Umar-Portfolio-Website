@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h2 className="text-3xl md:text-4xl lg:text-xl font-bold text-center md:text-left">Let's start working together!</h2>
-          <p className="text-lg md:text-xs text-gray-300">
+          <p className="text-sm md:text-xs text-gray-300">
             I'm always excited to collaborate on innovative projects and explore new opportunities. Whether you have a project in mind, want to discuss potential collaborations, or just want to say hello, I'd love to hear from you!
           </p>
         </div>
