@@ -11,6 +11,7 @@ import Works from "./components/Works";
 import Side from "./components/Side";
 import Skills from "./components/Skills";
 import Certificate from "./components/Certificate";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
@@ -32,6 +33,7 @@ const App = () => {
       <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-zinc-950">
       <Analytics/>
         <MouseFollow />
+          {/* <Navbar/> */}
         <div className="flex flex-col lg:flex-row gap-2 h-full">
           <div className="w-full lg:w-[75%]">
             <motion.div 

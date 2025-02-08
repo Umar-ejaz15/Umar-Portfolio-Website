@@ -1,14 +1,14 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaLaptopCode, FaUserNinja, FaReact, FaJs, FaDatabase, FaServer, FaBrain } from "react-icons/fa";
 import Buttons from "./Buttons";
+import Roboava from "./Roboava";
 
 const About = () => {
   return (
     <div className="px-2 bg-zinc-900 w-full h-[50%] flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-1000">
-      <div className="flex flex-col lg:flex-row justify-between items-center w-full p-2 sm:p-4 gap-4 sm:gap-8">
+      <div className="flex relative flex-col lg:flex-row justify-between items-center w-full p-2 sm:p-4 gap-4 sm:gap-8">
         <div className="abt1 w-full lg:w-2/3 flex gap-4 sm:gap-8 lg:gap-16 flex-col">
           <div className="abttext text-sm sm:text-sm lg:text-xs">
-            
             <h1 className="text-white/60 flex items-center gap-2 flex-wrap">
               <span className="animate-wave">👋</span> 
               <span className="hover:text-blue-400 transition-all duration-300">Welcome to my digital playground</span>
@@ -40,17 +40,11 @@ const About = () => {
               Let's create something amazing together! Whether it's a complex web application or an elegant solution,
               I'm ready to bring your vision to life.
             </p>
-           
           </div>
           <Buttons />
         </div>
-        <div className="abt2 w-2/3 sm:w-1/2 lg:w-1/3 transform hover:scale-105 transition-all duration-300">
-          <img
-            className="w-full h-full object-cover object-center rounded-full border-4 border-transparent hover:border-blue-400 transition-all duration-300 shadow-lg shadow-blue-400/20"
-            src="https://static.vecteezy.com/system/resources/thumbnails/048/216/761/small/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
-            alt="Umar Ejaz profile"
-            loading="lazy"
-          />
+        <div className="w-full h-4/5  md:h-2/3 md:w-auto md:absolute md:right-0 md:bottom-0">
+          <Roboava />
         </div>
       </div>
     </div>
