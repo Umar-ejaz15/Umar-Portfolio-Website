@@ -12,7 +12,7 @@ const Skills = () => {
             <FaNodeJs className="text-green-500 animate-bounce text-2xl" />
             Technical Skills
           </h3>
-          <ul className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-2">
+          <ul className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2">
             <li className="text-lg text-gray-300 hover:text-white transition-all hover:scale-105 flex items-center gap-3 bg-zinc-700/30 p-3 rounded-lg">
               <SiMongodb className="text-green-500 text-lg" />MongoDB
             </li>
