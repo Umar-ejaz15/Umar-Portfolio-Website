@@ -41,7 +41,7 @@ const Buttons = () => {
       <div className="relative group transform hover:scale-105 transition-all mt-4 sm:mt-0">
         <div className="absolute -inset-0.5 bg-blue-600 rounded-lg blur-sm opacity-75 group-hover:opacity-100 transition-all"></div>
         <button className="relative px-4 py-2 bg-black hover:bg-black/90 rounded-lg transition-all text-white font-bold text-base sm:text-lg whitespace-nowrap">
-         <a target='_blank' href="https://calendly.com/official-umer-ejaz/30min">
+         <a target='_blank' href="">
          
           Book a Call
          </a>

@@ -42,7 +42,7 @@ const MouseFollow = () => {
 
   return (
     <div 
-      className="fixed z-50 pointer-events-none select-none rounded-full bg-white/30 backdrop-blur-sm transform -translate-x-1/2 -translate-y-1/2"
+      className="fixed z-50 pointer-events-none select-none rounded-full bg-white/30 transform -translate-x-1/2 -translate-y-1/2"
       style={{ 
         left: `${position.x}px`,
         top: `${position.y}px`,
