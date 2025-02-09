@@ -31,7 +31,7 @@ const ClientReviews = () => {
   return (
     <div className="w-full mx-auto p-8 bg-zinc-900 text-white rounded-lg shadow-lg">
       <h2 className="text-3xl font-semibold text-center mb-8">Client Reviews</h2>
-      <div className=" grid grid-cols-2 gap-4 ">
+      <div className=" grid grid-rows-1 md:grid-cols-2 gap-4 ">
         {reviews.map((review, index) => (
           <div key={index} className=" bg-zinc-800 p-6 rounded-lg shadow-md">
             <div className="flex items-center ">
