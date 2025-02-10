@@ -63,27 +63,20 @@ const App = () => {
                 <Works />
               </motion.div>
 
-              {/* Contact Section */}
+
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="w-full lg:w-1/2"
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="w-full lg:w-1/2  mt-2"
               >
-                <Contact />
+                <Side />
               </motion.div>
 
               {/* Side Section */}
 
             </div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="w-full mt-2"
-            >
-              <Side />
-            </motion.div>
+
           </div>
         </div>
         <motion.div
@@ -101,6 +94,14 @@ const App = () => {
           className="w-full mt-2"
         >
           <ClientReviews />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-full lg:w-full"
+        >
+          <Contact />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 20 }}

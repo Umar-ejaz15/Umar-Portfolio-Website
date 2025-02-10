@@ -1,58 +1,95 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaLaptopCode, FaUserNinja, FaReact, FaJs, FaDatabase, FaServer, FaBrain } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaCode,
+  FaLaptopCode,
+  FaUserNinja,
+  FaReact,
+  FaJs,
+  FaDatabase,
+  FaServer,
+  FaBrain,
+} from "react-icons/fa";
 import Buttons from "./Buttons";
 import Roboava from "./Roboava";
 
 const About = () => {
   return (
-    <div className="px-2 bg-zinc-900 w-full h-auto flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-1000">
-      <div className="flex w-full flex-col lg:flex-row  gap-2 sm:gap-2">
-        <div className="abt1 w-full lg:w-2/3 flex gap-4 sm:gap-8 lg:gap-16 flex-col p-4">
+    <div className="px-4 bg-zinc-900 w-full h-auto flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-700 shadow-lg">
+      <div className="flex w-full flex-col lg:flex-row gap-4 sm:gap-6">
+        <div className="abt1 w-full md:w-2/3 flex gap-4 sm:gap-8 lg:gap-12 flex-col p-6">
           <div className="abttext text-sm sm:text-base">
-            <h1 className="text-white/60 flex items-center gap-2 flex-wrap">
+            <h1 className="text-white/80 flex items-center gap-3 flex-wrap text-xl">
               <span className="animate-wave">👋</span>
-              <span className="hover:text-blue-400 transition-all duration-300">Stop Struggling. Start Building.</span>
+              <span className="hover:text-blue-400 transition-all duration-300 font-semibold">
+                Transform Your Ideas Into Reality
+              </span>
               <FaCode className="text-blue-400 animate-pulse" />
             </h1>
-            <p className="my-2 sm:my-4 text-xl flex items-center gap-2 flex-wrap">
+            <p className="my-3 sm:my-4 text-xl flex items-center gap-2 flex-wrap">
               <FaUserNinja className="text-green-400" />
-              Hey, I'm <strong className="text-bold uppercase hover:text-blue-400 transition-colors">Umar</strong>
-
+              Hi, I'm{" "}
+              <strong className="text-bold uppercase hover:text-blue-400 transition-colors">
+                Umar
+              </strong>
             </p>
-            <h1>– The Web Developer You Need! You need a <strong> kickass web</strong> app that works smoothly, looks great, and actually <strong> delivers results? Well, guess what? I'm the MAN for this job. </strong>
-              <FaLaptopCode className="text-yellow-400 animate-bounce" /></h1>
+            <h1 className="text-xl font-medium leading-relaxed">
+              – Your Full-Stack Development Partner. Specializing in creating{" "}
+              <strong className="text-blue-400">
+                powerful web applications
+              </strong>{" "}
+              that combine stunning design with robust functionality.
+              <FaLaptopCode className="text-yellow-400 animate-bounce inline-block ml-2" />
+            </h1>
 
-            <p className="mb-2 sm:mb-4 flex text-lg items-center gap-2 flex-wrap text-gray-200">
-              <FaBrain className="text-pink-400 animate-pulse" />
-              I don't just build websites—I craft <strong>
-
-                fast, scalable, and user-friendly
+            <p className="my-4 flex text-lg items-center gap-2 flex-wrap text-gray-200 leading-relaxed">
+              {/* <FaBrain className="text-pink-400 animate-pulse" /> */}I
+              specialize in crafting{" "}
+              <strong className="">
+                high-performance, scalable, and intuitive
+              </strong>{" "}
+              digital solutions that drive real business results. From
+              <strong className="text-green-300">
+                {" "}
+                dynamic e-commerce platforms
+              </strong>{" "}
+              to{" "}
+              <strong className="text-green-300">
+                sophisticated web applications
               </strong>
-              applications that make your life (and your users' lives) easier. Whether it's an
-              <strong>
+              , I transform complex requirements into elegant solutions.
+            </p>
 
-
-                e-commerce store, a real-time tracking app, or a sleek interactive website, I turn your vision into reality</strong>—without the tech headaches. <strong>
-                Confused?
-
-              </strong>
-              Don't be. I got this. With the <strong>
-
+            <p className="mb-4 text-lg text-gray-200 leading-relaxed">
+              Leveraging the power of the{" "}
+              <strong className="">
                 MERN stack (MongoDB, Express.js, React.js, Node.js)
               </strong>
-              as my weapon of choice, I bring ideas to life—clean code, smooth animations, and seamless functionality included. Need an app that runs like
+              , I build applications that are not just functional but
+              exceptional. Every project is an opportunity to create something
+              <strong> fast, responsive, and user-centric</strong>.
+            </p>
 
-              <strong>
-
-
-                The Flash? A website that wows like Iron Man's tech? Let's build it.</strong> Still scrolling? Stop. Let's make something awesome together. 🚀 <strong className=" uppercase hover:text-blue-600 text-blue-500 underline  " ><a href="https://calendly.com/official-umer-ejaz/30min">Hit me up!</a></strong>
+            <p className="text-lg text-gray-200 leading-relaxed">
+              Ready to bring your vision to life? Let's create something
+              extraordinary together!
+              <strong className="ml-2 uppercase hover:text-blue-600 text-blue-500 underline transition-colors">
+                <a
+                  href="https://calendly.com/official-umer-ejaz/30min"
+                  className="hover:text-blue-400"
+                >
+                  Schedule a Consultation
+                </a>
+              </strong>
+              <span className="ml-2">🚀</span>
             </p>
           </div>
-          {/* <Buttons /> */}
         </div>
-        <div className="w-full lg:w-1/2 h-[400px] lg:h-[600px]">
+        <div className="w-full lg:w-1/3 h-[400px] lg:h-[500px] flex items-center justify-center">
           <Roboava />
-        </div>
+        </div>{" "}
       </div>
     </div>
   );
