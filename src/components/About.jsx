@@ -17,25 +17,25 @@ import Roboava from "./Roboava";
 
 const About = () => {
   return (
-    <div className="px-4 bg-zinc-900 w-full h-auto flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-700 shadow-lg">
+    <div className="px-1 bg-zinc-900 w-full h-auto flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-700 shadow-lg">
       <div className="flex w-full flex-col lg:flex-row gap-4 sm:gap-6">
         <div className="abt1 w-full md:w-2/3 flex gap-4 sm:gap-8 lg:gap-12 flex-col p-6">
           <div className="abttext text-sm sm:text-base">
-            <h1 className="text-white/80 flex items-center gap-3 flex-wrap text-xl">
+            <h1 className="text-white/80 flex items-center gap-3 flex-wrap text-md sm:text-lg lg:text-xl font-semibold">
               <span className="animate-wave">👋</span>
               <span className="hover:text-blue-400 transition-all duration-300 font-semibold">
                 Transform Your Ideas Into Reality
               </span>
               <FaCode className="text-blue-400 animate-pulse" />
             </h1>
-            <p className="my-3 sm:my-4 text-xl flex items-center gap-2 flex-wrap">
+            <p className="my-3 sm:my-4 text-lg md:text-xl flex items-center gap-2 flex-wrap">
               <FaUserNinja className="text-green-400" />
               Hi, I'm{" "}
               <strong className="text-bold uppercase hover:text-blue-400 transition-colors">
                 Umar
               </strong>
             </p>
-            <h1 className="text-xl font-medium leading-relaxed">
+            <h1 className="text-lg md:text-xl font-medium leading-relaxed">
               – Your Full-Stack Development Partner. Specializing in creating{" "}
               <strong className="text-blue-400">
                 powerful web applications
@@ -44,7 +44,7 @@ const About = () => {
               <FaLaptopCode className="text-yellow-400 animate-bounce inline-block ml-2" />
             </h1>
 
-            <p className="my-4 flex text-lg items-center gap-2 flex-wrap text-gray-200 leading-relaxed">
+            <p className="my-4 flex text-lg md:text-xl items-center gap-2 flex-wrap text-gray-200 leading-relaxed">
               {/* <FaBrain className="text-pink-400 animate-pulse" /> */}I
               specialize in crafting{" "}
               <strong className="">
@@ -62,7 +62,7 @@ const About = () => {
               , I transform complex requirements into elegant solutions.
             </p>
 
-            <p className="mb-4 text-lg text-gray-200 leading-relaxed">
+            <p className="mb-4 text-lg md:text-xl text-gray-200 leading-relaxed">
               Leveraging the power of the{" "}
               <strong className="">
                 MERN stack (MongoDB, Express.js, React.js, Node.js)
