@@ -47,7 +47,7 @@ const Projects = () => {
 
   ];
   return (
-    <div className="w-full min-h-screen px-4 py-8 bg-zinc-900">
+    <div className="w-full h-auto px-4 py-8 bg-zinc-900">
       <h1 className="text-left text-4xl font-bold mb-8 text-white">Projects</h1>
       <div className="w-full max-w-7xl mx-auto">
         <Swiper
