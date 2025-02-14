@@ -2,3 +2,20 @@
     font-family:  popins;
     /* font-size: 1.1em; */
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #464646;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(26, 29, 32)000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1f1b1b;
+}

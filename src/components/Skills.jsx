@@ -1,6 +1,6 @@
-import React from 'react'
-import { FaDatabase, FaNodeJs, FaReact, FaGitAlt, FaCode, FaLaptopCode, FaGamepad, FaBook, FaGithub, FaFigma } from 'react-icons/fa'
-import { SiExpress, SiTypescript, SiJavascript, SiMongodb, SiTailwindcss, SiBootstrap, SiRedux, SiPostman, SiNetlify, SiVercel, SiFramer, SiMongoose } from 'react-icons/si'
+
+import {  FaNodeJs, FaReact, FaGitAlt,  FaGamepad,  FaGithub, FaFigma } from 'react-icons/fa'
+import { SiExpress, SiJavascript, SiMongodb, SiTailwindcss, SiBootstrap, SiRedux, SiPostman, SiNetlify, SiVercel, SiFramer, SiMongoose } from 'react-icons/si'
 
 const Skills = () => {
   return (

@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Certificate from "./components/Certificate";
 import ClientReviews from "./components/Reviews";
+import Projects from "./components/Projects";
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
@@ -36,7 +37,7 @@ const App = () => {
       <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-zinc-950">
         <Analytics />
         <MouseFollow />
-        <Navbar />
+      
 
         {/* Main Layout */}
         <div className="flex flex-col lg:flex-row gap-2 h-full">
@@ -68,7 +69,7 @@ const App = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="w-full lg:w-1/2  mt-2"
+                className="w-full lg:w-1/2  "
               >
                 <Side />
               </motion.div>
@@ -79,6 +80,14 @@ const App = () => {
 
           </div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="w-full mt-2"
+        >
+          <Projects />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

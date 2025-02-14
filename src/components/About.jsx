@@ -1,18 +1,10 @@
-import React from "react";
 import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
+
   FaCode,
   FaLaptopCode,
   FaUserNinja,
-  FaReact,
-  FaJs,
-  FaDatabase,
-  FaServer,
-  FaBrain,
+
 } from "react-icons/fa";
-import Buttons from "./Buttons";
 import Roboava from "./Roboava";
 
 const About = () => {
