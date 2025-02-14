@@ -26,7 +26,7 @@ const Projects = () => {
     
     },
     {
-      imgUrl: "/public/image.png",
+      imgUrl: "/image.png",
       title: "Design Dynamo Portfolio ",
       description:
         "Design Dynamo Portfolio Created WIth React, Tailwind,GSAP",
@@ -36,7 +36,7 @@ const Projects = () => {
 
     },
     {
-      imgUrl: "/public/FinePpay _ 편리한 편의점 결제 서비스 - Google Chrome 11_16_2024 12_28_24 AM.png",
+      imgUrl: "/FinePpay _ 편리한 편의점 결제 서비스 - Google Chrome 11_16_2024 12_28_24 AM.png",
       title: "FinePpay ",
       description:
         "FinePay Website Created WIth React, Tailwind",
