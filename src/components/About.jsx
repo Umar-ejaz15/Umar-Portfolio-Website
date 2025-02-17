@@ -1,18 +1,70 @@
-import {
-
-  FaCode,
-  FaLaptopCode,
-  FaUserNinja,
-
-} from "react-icons/fa";
-import Roboava from "./Roboava";
+import { FaCode, FaLaptopCode, FaUserNinja } from "react-icons/fa";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const About = () => {
+  const aboutRef = useRef(null);
+  const textRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline();
+
+    tl.from(aboutRef.current, {
+      duration: 1,
+      opacity: 0,
+      y: -200,
+      // width: 10000,
+      rotate: 360,
+      // position:"absolute",
+      // top:0,
+      // left:0,
+      height:1000,
+
+      // scaleX: 0,
+      ease: "power3.out",
+      
+      // scrollTrigger: {
+      //   trigger: aboutRef.current,
+      //   start: "top center",
+      //   end: "bottom center",
+      //   markers: true,
+      //   scrub: true,
+      // },
+    })
+      .from(
+        textRef.current.children,
+        {
+          duration: 0.8,
+          opacity: 0,
+          y: 50,
+          stagger: 0.2,
+          ease: "power3.out",
+        },
+        "-=0.5"
+      )
+      .from(
+        imageRef.current,
+        {
+          duration: 1,
+          opacity: 0,
+          x: 100,
+          ease: "power3.out",
+        },
+        "-=0.8"
+      );
+  }, []);
+
   return (
-    <div className="px-1 bg-zinc-900 w-full h-auto flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-700 shadow-lg">
+    <div
+      ref={aboutRef}
+      className="px-1 bg-zinc-900 w-full h-auto flex justify-between hover:border-[2px] hover:border-white border-[2px] border-transparent rounded-lg transition-all duration-700 shadow-lg"
+    >
       <div className="flex w-full flex-col lg:flex-row gap-4 sm:gap-6">
         <div className="abt1 w-full md:w-2/3 flex gap-4 sm:gap-8 lg:gap-12 flex-col p-6">
-          <div className="abttext text-sm sm:text-base">
+          <div ref={textRef} className="abttext text-sm sm:text-base">
             <h1 className="text-white/80 flex items-center gap-3 flex-wrap text-md sm:text-lg lg:text-xl font-semibold">
               <span className="animate-wave">👋</span>
               <span className="hover:text-blue-400 transition-all duration-300 font-semibold">
@@ -37,8 +89,7 @@ const About = () => {
             </h1>
 
             <p className="my-4 flex text-lg md:text-xl items-center gap-2 flex-wrap text-gray-200 leading-relaxed">
-              {/* <FaBrain className="text-pink-400 animate-pulse" /> */}I
-              specialize in crafting{" "}
+              I specialize in crafting{" "}
               <strong className="">
                 high-performance, scalable, and intuitive
               </strong>{" "}
@@ -79,9 +130,16 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="w-full lg:w-1/3 h-[400px] lg:h-[500px] flex items-center justify-center">
-          <Roboava />
-        </div>{" "}
+        <div
+          ref={imageRef}
+          className="w-full lg:w-1/3 h-[400px] lg:h-auto object-cover object-center flex justify-end items-end"
+        >
+          <img
+            className="bg-blend-darken"
+            src="../../476798368_924086646543488_2468413768336884832_n-removebg-preview.png"
+            alt="Avatar"
+          />
+        </div>
       </div>
     </div>
   );

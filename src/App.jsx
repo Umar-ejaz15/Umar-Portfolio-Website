@@ -22,25 +22,36 @@ const App = () => {
     <>
       <Helmet>
         <title>Umar - MERN Stack Developer | Portfolio</title>
-        <meta name="description" content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development." />
-        <meta name="keywords" content="MERN stack, web developer, MongoDB, Express.js, React.js, Node.js, full stack developer, JavaScript" />
+        <meta
+          name="description"
+          content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development."
+        />
+        <meta
+          name="keywords"
+          content="MERN stack, web developer, MongoDB, Express.js, React.js, Node.js, full stack developer, JavaScript"
+        />
         <meta name="author" content="Umar" />
         <meta property="og:title" content="Umar - MERN Stack Developer" />
-        <meta property="og:description" content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development." />
+        <meta
+          property="og:description"
+          content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development."
+        />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Umar - MERN Stack Developer" />
-        <meta name="twitter:description" content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development." />
+        <meta
+          name="twitter:description"
+          content="I'm Umar, a MERN Stack Developer specializing in MongoDB, Express.js, React.js, and Node.js development."
+        />
         <link rel="canonical" href="https://your-website-url.com" />
       </Helmet>
 
       <div className="w-full min-h-screen py-2 px-4 sm:px-6 md:px-8 lg:px-20 text-white bg-zinc-950">
         <Analytics />
         <MouseFollow />
-      
 
         {/* Main Layout */}
-        <div className="flex flex-col lg:flex-row gap-2 h-full">
+        <div className="flex flex-col lg:flex-row gap-2 h-full overflow-hidden">
           {/* Left Section */}
           <div className="w-full ">
             <motion.div
@@ -64,7 +75,6 @@ const App = () => {
                 <Works />
               </motion.div>
 
-
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -75,9 +85,7 @@ const App = () => {
               </motion.div>
 
               {/* Side Section */}
-
             </div>
-
           </div>
         </div>
         <motion.div
@@ -120,8 +128,6 @@ const App = () => {
         >
           <Certificate />
         </motion.div>
-
-
       </div>
     </>
   );
