@@ -1,6 +1,7 @@
 import { FaCode, FaLaptopCode, FaUserNinja } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Roboava from "./Roboava";
 import { ScrollTrigger } from "gsap/all";
 
 const About = () => {
@@ -134,11 +135,7 @@ const About = () => {
           ref={imageRef}
           className="w-full lg:w-1/3 h-[400px] lg:h-auto object-cover object-center flex justify-end items-end"
         >
-          <img
-            className="bg-blend-darken"
-            src="../../476798368_924086646543488_2468413768336884832_n-removebg-preview.png"
-            alt="Avatar"
-          />
+         <Roboava/>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import  { Suspense } from 'react';
 import Spline from '@splinetool/react-spline';
 
 const Roboava = () => (
