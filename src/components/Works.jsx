@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { FaCode, FaDesktop, FaMobile, FaPaintBrush } from "react-icons/fa";
 
@@ -30,14 +31,14 @@ const Works = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-2 h-full">
-      <div
+    <motion.div className="flex flex-col gap-2 h-full">
+      <motion.div
         className="bg-zinc-900 w-full text-center text-base md:text-xl border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white hover:shadow-lg hover:shadow-zinc-800/50"
         data-aos="fade-down"
       >
         {new Date().toLocaleTimeString()}
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className="p-1 md:p-6 bg-zinc-900 w-full h-full border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white hover:shadow-lg hover:shadow-zinc-800/50"
         data-aos="fade-up"
       >
@@ -54,30 +55,30 @@ const Works = () => {
         >
           Services
         </h1>
-        <div className="grid grid-cols-1 gap-4">
+        <motion.div className="grid grid-cols-1 gap-4">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="group flex items-center gap-4 p-4 bg-zinc-800/50 backdrop-blur-sm rounded-lg hover:bg-zinc-700 transition-all duration-300 hover:transform hover:scale-102 hover:shadow-xl hover:shadow-zinc-900/50"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300">
+              <motion.div className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300">
                 {service.icon}
-              </div>
-              <div>
+              </motion.div>
+              <motion.div>
                 <h2 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {service.title}
                 </h2>
                 <p className="text-md text-zinc-200 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 export default Works;

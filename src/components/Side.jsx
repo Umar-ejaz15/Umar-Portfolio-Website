@@ -1,4 +1,5 @@
 
+import { motion } from "framer-motion";
 import {
   FaSpinner,
   FaBriefcase,
@@ -16,6 +17,7 @@ import {
 } from "react-icons/fa";
 
 const Side = () => {
+  
   const openResume = () => {
     window.open("../../Umar Ejaz Resume.pdf", "_blank");
   };
@@ -72,13 +74,15 @@ const Side = () => {
             </div>
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
-            <button
+            <motion.button
               onClick={openResume}
+              whileTap={{ scale: 0.9 }}
+              
               className="flex items-center gap-2 text-sm bg-zinc-800 px-5 py-2.5 rounded-lg hover:bg-zinc-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <FaFileAlt className="text-emerald-400 hover:text-emerald-300" />
               <span>Download CV</span>
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
