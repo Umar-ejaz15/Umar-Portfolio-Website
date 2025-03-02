@@ -56,8 +56,8 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="w-full h-auto px-4 py-16 bg-zinc-900">
-      <h1 className="text-center text-5xl font-bold mb-12 text-white">
+    <div className="w-full h-auto px-4 py-16 bg-gray-100 dark:bg-[#18181b]">
+      <h1 className="text-center text-5xl font-bold mb-12 text-gray-900">
         Projects
       </h1>
       <div className="w-full max-w-7xl mx-auto">
@@ -84,9 +84,8 @@ const Projects = () => {
           {data.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="flex items-center justify-center group relative overflow-hidden rounded-xl transform transition-all duration-500 "
+              className="flex items-center justify-center group relative overflow-hidden rounded-xl transform transition-all duration-500 bg-white dark:bg-zinc-900"
             >
-             
               <Card data={project} />
             </SwiperSlide>
           ))}

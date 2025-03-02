@@ -31,25 +31,25 @@ const Works = () => {
   ];
 
   return (
-    <motion.div className="flex flex-col gap-2 h-full">
+    <motion.div className="flex flex-col gap-2 h-full ">
       <motion.div
-        className="bg-zinc-900 w-full text-center text-base md:text-xl border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white hover:shadow-lg hover:shadow-zinc-800/50"
+        className=" bg-white dark:bg-[#18181b] flex flex-col hover:border-[1px] hover:border-blue-600 dark:hover:border-white border-[1px] text-center py-5 border-transparent rounded-lg transition-all duration-300"
         data-aos="fade-down"
       >
         {new Date().toLocaleTimeString()}
       </motion.div>
       <motion.div
-        className="p-1 md:p-6 bg-zinc-900 w-full h-full border-[2px] border-transparent rounded-lg transition-all duration-300 hover:border-white hover:shadow-lg hover:shadow-zinc-800/50"
+        className="p-1 md:p-6 bg-white dark:bg-[#18181b] flex flex-col hover:border-[1px] hover:border-blue-600 dark:hover:border-white border-[1px] border-transparent rounded-lg transition-all duration-300"
         data-aos="fade-up"
       >
         <p
-          className="text-xl text-zinc-200 mb-4 leading-relaxed"
+          className="text-xl text-gray-600 dark:text-[#34d399] mb-4 leading-relaxed"
           data-aos="fade-right"
         >
           What I Do Best 🚀
         </p>
         <h1
-          className="text-2xl md:text-xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+          className="text-2xl md:text-xl font-bold mb-6 text-gray-900 dark:text-[#ffffff]"
           data-aos="fade-left"
         >
           Services
@@ -58,18 +58,19 @@ const Works = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="group flex items-center gap-4 p-4 bg-zinc-800/50 backdrop-blur-sm rounded-lg hover:bg-zinc-700 transition-all duration-300 hover:transform hover:scale-102 hover:shadow-xl hover:shadow-zinc-900/50"
+              className="group  items-center gap-4 p-4 bg-white dark:bg-[#18181b] flex flex-col hover:border-[1px]  hover:border-blue-600 dark:hover:border-white border-[1px] 
+              border-transparent rounded-lg  duration-300 hover:transform hover:scale-102"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <motion.div className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300">
+              <motion.div className="text-xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
                 {service.icon}
               </motion.div>
               <motion.div>
-                <h2 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-lg font-bold text-gray-900 dark:text-[#a855f7]">
                   {service.title}
                 </h2>
-                <p className="text-md text-zinc-200 leading-relaxed">
+                <p className="text-md text-gray-600 dark:text-[#d4d4d8] leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>
