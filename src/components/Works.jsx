@@ -6,27 +6,27 @@ const Works = () => {
   const services = [
     {
       icon: <FaCode />,
-      title: "Front-end development",
+      title: "Front-End Development",
       description:
-        "Creating responsive and dynamic websites using modern technologies like React, Next.js, and Tailwind CSS.",
+        "I build fast, responsive, and eye-catching websites using React, Next.js, and Tailwind CSS. Think of it like crafting the Iron Man suit—sleek, powerful, and optimized for performance.",
     },
     {
       icon: <FaDesktop />,
-      title: " Backend Development",
+      title: "Back-End Development",
       description:
-        "Building robust and scalable server-side applications using Node.js and Express.js.",
+        "A strong front-end needs a solid backbone. I create scalable, high-performance server-side applications using Node.js and Express.js—because what's the point of a sports car if the engine is trash?",
     },
     {
       icon: <FaMobile />,
-      title: "Full-stack Development",
+      title: "Full-Stack Development",
       description:
-        "Developing end-to-end web applications with both front-end and back-end components.",
+        "Why hire two devs when you can have one who does it all? I handle everything from UI to databases, making sure your app runs smoothly from end to end—like Batman working solo (but way less brooding).",
     },
     {
       icon: <FaPaintBrush />,
       title: "UI/UX Design",
       description:
-        "Creating intuitive and beautiful user interfaces with focus on user experience and modern design principles.",
+        "A great product isn't just about function—it should feel right too. I design intuitive, user-friendly interfaces that make people want to stay, click, and engage (instead of rage-quitting after five seconds).",
     },
   ];
 
@@ -46,8 +46,7 @@ const Works = () => {
           className="text-xl text-zinc-200 mb-4 leading-relaxed"
           data-aos="fade-right"
         >
-          I specialize in creating innovative digital solutions across various
-          platforms and technologies. Here's what I can offer:
+          What I Do Best 🚀
         </p>
         <h1
           className="text-2xl md:text-xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"

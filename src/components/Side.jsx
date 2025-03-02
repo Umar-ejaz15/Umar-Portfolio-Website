@@ -1,93 +1,65 @@
+  import { motion } from "framer-motion";
+  import {
+    FaSpinner,
+    FaBriefcase,
 
-import { motion } from "framer-motion";
-import {
-  FaSpinner,
-  FaBriefcase,
-
-  FaFileAlt,
+    FaFileAlt,
  
-  FaUserTie,
-  FaCode,
-  FaDatabase,
-  FaServer,
-  FaMobileAlt,
-  FaGraduationCap,
+    FaUserTie,
+    FaCode,
+    FaDatabase,
+    FaServer,
+    FaMobileAlt,
+    FaGraduationCap,
 
-  FaClock,
-} from "react-icons/fa";
+    FaClock,
+  } from "react-icons/fa";
 
-const Side = () => {
+  const Side = () => {
   
-  const openResume = () => {
-    window.open("../../Umar Ejaz Resume.pdf", "_blank");
-  };
+    
 
-  return (
-    <div className="flex flex-col gap-3 h-full">
-      <div className="p-5 sm:p-4 bg-zinc-900 w-full h-full flex flex-col gap-6 sm:gap-8 hover:border-[2px] hover:border-white text-center items-center text-xl sm:text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300  shadow-lg">
-        <div className="flex items-center justify-between w-full">
-          <FaUserTie className="text-indigo-500 text-3xl" />
-          <h1 className="flex items-center text-lg gap-2 font-semibold">
-            <span>Available for Opportunities</span>
-          </h1>
-          <FaSpinner className="animate-spin text-emerald-500 w-7 h-7 sm:w-8 sm:h-8" />
-        </div>
-        <div className="w-full space-y-6">
-          <div>
-            <h1 className="text-left text-lg sm:text-xl font-bold text-white/90 mb-4 flex items-center gap-3">
-              <FaBriefcase className="text-amber-500 text-2xl" />
-              Professional Overview
+    return (
+      <div className="flex flex-col gap-3 h-full">
+        <div className="p-5 sm:p-4 bg-zinc-900 w-full h-full flex flex-col gap-6 sm:gap-8 hover:border-[2px] hover:border-white text-center items-center text-xl sm:text-2xl border-[2px] border-transparent rounded-lg transition-all duration-300  shadow-lg">
+          <div className="flex items-center justify-between w-full">
+            <FaUserTie className="text-indigo-500 text-3xl" />
+            <h1 className="flex items-center text-xl gap-2 font-semibold">
+              <span>Why Work With Me? 🤔</span>
             </h1>
-            <div className="text-left text-sm sm:text-base text-white/80 space-y-4">
-              <p className="flex items-center gap-3 text-md hover:text-white transition-colors duration-300">
-                <FaCode className="text-blue-500 flex-shrink-0 text-xl" />
-                Full Stack Developer specializing in MERN stack with 3+ years of
-                experience in building scalable web applications and
-                microservices
-              </p>
-              <p className="flex items-center gap-3 text-md hover:text-white transition-colors duration-300">
-                <FaDatabase className="text-green-500 flex-shrink-0 text-xl" />
-                Advanced proficiency in MongoDB, Express.js, React.js, and
-                Node.js with experience in SQL databases and AWS cloud services
-              </p>
-              <p className="flex items-center gap-3 text-md hover:text-white transition-colors duration-300">
-                <FaServer className="text-purple-500 flex-shrink-0 text-xl" />
-                Implemented real-time features using Socket.io, WebSockets, and
-                built secure authentication systems with JWT and OAuth
-              </p>
-              <p className="flex items-center gap-3 text-md hover:text-white transition-colors duration-300">
-                <FaMobileAlt className="text-orange-500 flex-shrink-0 text-xl" />
-                Expertise in modern frontend technologies including Next.js,
-                TypeScript, Tailwind CSS, GSAP, and Framer Motion
-              </p>
-
-              <p className="flex items-center gap-3 text-md hover:text-white transition-colors duration-300">
-                <FaClock className="text-cyan-500 flex-shrink-0 text-xl" />
-                Successfully delivered 10+ commercial projects with focus on
-                performance optimization and user experience
-              </p>
-              <p className="flex items-center gap-3 text-md hover:text-white transition-colors duration-300">
-                <FaGraduationCap className="text-red-500 flex-shrink-0 text-xl" />
-                Currently pursuing B.S. in Data Science with focus on machine
-                learning and data analytics, maintaining a 3.8 GPA
-              </p>
-            </div>
+            <FaSpinner className="animate-spin text-emerald-500 w-7 h-7 sm:w-8 sm:h-8" />
           </div>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <motion.button
-              onClick={openResume}
-              whileTap={{ scale: 0.9 }}
-              
-              className="flex items-center gap-2 text-sm bg-zinc-800 px-5 py-2.5 rounded-lg hover:bg-zinc-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              <FaFileAlt className="text-emerald-400 hover:text-emerald-300" />
-              <span>Download CV</span>
-            </motion.button>
+          <div className="w-full space-y-6">
+            <div>
+              <div className="text-left text-base sm:text-lg text-white/80 space-y-4">
+                <p className="text-lg hover:text-white transition-colors duration-300">
+                  Let's be real... Finding a good developer is like finding a decent show after Game of Thrones ended (yeah, it's tough). You need someone who actually knows what they're doing—someone who won't ghost you, overcomplicate things, or burn your budget on unnecessary fluff. Well, good news—you just found that developer.
+                </p>
+                <p className="text-lg hover:text-white transition-colors duration-300">
+                  🔹 I BUILD SOLUTIONS, NOT JUST CODE. Your project isn't just "another job" for me. I treat it like my own. Every line of code I write is focused on making your business faster, stronger, and more profitable.
+                </p>
+                <p className="text-lg hover:text-white transition-colors duration-300">
+                  🔹 COMMUNICATION THAT DOESN'T SUCK. You'll never wonder, "What's the status?" because I keep things clear, transparent, and to the point. (Also, I reply fast—like, really fast.)
+                </p>
+                <p className="text-lg hover:text-white transition-colors duration-300">
+                  🔹 AFFORDABLE, BUT NOT CHEAP. You'll find freelancers charging rock-bottom prices, but let's be honest—cheap work ends up costing more in the long run. I deliver high-quality work at a rate that makes sense. No surprises, no hidden fees.
+                </p>
+                <p className="text-lg hover:text-white transition-colors duration-300">
+                  🔹 I FIX MESSES. Have a broken app? Code that looks like it was written by a sleep-deprived raccoon? I clean up disasters and make things run smoothly.
+                </p>
+                <p className="text-lg hover:text-white transition-colors duration-300">
+                  💡 Bottom line: If you want a developer who gets it—someone who delivers quality, meets deadlines, and makes your life easier—you're in the right place.
+                </p>
+                <p className="text-lg hover:text-white transition-colors duration-300">
+                  📩 Let's talk. (Seriously, why wait?)
+                </p>
+              </div>
+            </div>
+           
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
-export default Side;
+  export default Side;

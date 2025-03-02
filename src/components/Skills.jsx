@@ -73,7 +73,7 @@ const Skills = () => {
           <div className="flex items-start gap-4 flex-wrap">
             <p className="text-md md:text-lg text-gray-300 leading-relaxed hover:text-white transition-colors flex-1">
             {/* <FaBook className="text-green-400 text-2xl mt-1" /> */}
-              I'm deeply passionate about crafting exceptional web experiences that combine stunning design with robust functionality. My expertise spans from creating smooth animations using GSAP and Framer Motion to building scalable backend systems with Node.js and MongoDB. I excel in developing responsive interfaces with Tailwind CSS and Bootstrap, implementing state management with Redux Toolkit, and ensuring seamless deployment through Netlify and Vercel. I'm constantly exploring new technologies and best practices to deliver innovative solutions that exceed expectations.
+              🚀 Passion & Innovation I don't just write code—I craft experiences. My passion lies in learning, experimenting, and pushing boundaries to build smarter, faster, and more intuitive digital solutions. Every challenge is an opportunity to innovate, every project a chance to level up. Stagnation? Not in my vocabulary. I thrive on new technologies, fresh ideas, and creative problem-solving, ensuring that every solution is ahead of the curve. If it can be built better, faster, or smarter—I'm already on it.
             </p>
           </div>
         </div>
