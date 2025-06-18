@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { MagicCard } from "@/components/magicui/magic-card";
+import { ShineBorder } from "@/components/magicui/shine-border";
+import Cards from "@/components/Cards";
 
 const WhyMe = () => {
   const fadeInUp = {
@@ -27,7 +29,7 @@ const WhyMe = () => {
     },
   };
 
-  const features = [
+  const data = [
     {
       icon: "💻",
       title: "MERN STACK MASTERY",
@@ -94,57 +96,48 @@ const WhyMe = () => {
           </motion.p>
         </BoxReveal>
 
-        <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="whileInView"
-          className="grid md:grid-cols-2 gap-8 mt-12"
+       <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 mt-10   items-start content-center gap-8"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.1, delay: 0.2 }}
         >
-          {features.map((feature, index) => (
-            <motion.div key={index} variants={fadeInUp}>
+          {data.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.1, delay: index * 0.1 + 0.2 }}
+            >
               <BoxReveal>
-                <MagicCard className="h-full bg-zinc-950 backdrop-blur-sm rounded-xl p-8 transform hover:scale-[1.02] transition-all duration-300 border border-zinc-800/50 hover:border-zinc-700">
-                  <div className="flex flex-col md:flex-row items-start gap-6">
-                    <span className="text-4xl bg-gradient-to-br from-zinc-800 to-zinc-900 p-4 rounded-lg shadow-xl">
-                      {feature.icon}
-                    </span>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-100 mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                </MagicCard>
+                <Cards data={item} />
               </BoxReveal>
             </motion.div>
           ))}
         </motion.div>
-
         <MagicCard className="mt-20">
           <BoxReveal>
             <motion.div
               initial="initial"
               whileInView="whileInView"
               variants={fadeInUp}
-              className="bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 p-8 rounded-2xl backdrop-blur-sm border border-zinc-700/50"
+              className="bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 p-8 rounded-2xl backdrop-blur-sm relative  w-full overflow-hidden"
             >
-              <div className="flex flex-col md:flex-row items-start gap-6">
+              <div className="flex flex-col md:flex-row items-start gap-6 ">
                 <span className="text-5xl bg-gradient-to-br from-zinc-700 to-zinc-800 p-6 rounded-lg shadow-xl">
                   🚀
                 </span>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-100 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                  <h3 className="text-2xl font-bold text-gray-100 mb-4 bg-clip-text  bg-gradient-to-r from-blue-400 to-purple-400">
                     Ready to Create Something Extraordinary?
                   </h3>
                   <p className="text-lg mb-6 text-gray-300 leading-relaxed">
-                    I don't just build websites—I create digital experiences that
-                    leave a lasting impression. With expertise in the complete
-                    MERN stack and a passion for clean, efficient code, I'm here
-                    to turn your vision into reality. Let's build something that's
-                    not just functional, but absolutely extraordinary.
+                    I don't just build websites—I create digital experiences
+                    that leave a lasting impression. With expertise in the
+                    complete MERN stack and a passion for clean, efficient code,
+                    I'm here to turn your vision into reality. Let's build
+                    something that's not just functional, but absolutely
+                    extraordinary.
                   </p>
                   <motion.p
                     whileHover={{ scale: 1.02 }}

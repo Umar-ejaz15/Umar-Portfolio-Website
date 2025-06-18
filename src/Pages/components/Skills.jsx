@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const images = [
@@ -44,39 +45,99 @@ const Skills = () => {
     { icon: <SiFigma size={64} color="#F24E1E" />, name: "Figma" },
   ];
 
+  const boxVariant = {
+    hidden: {
+      opacity: 0,
+      scale: 0.5,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0, 0.71, 0.2, 1.01],
+      },
+    },
+  };
+
   return (
-    <div className="relative bg-zinc-900/70 py-24 sm:py-32 ">
+    <div className="relative bg-zinc-900/70 py-24 sm:py-32">
       <div className="absolute inset-0 w-full h-full z-0 opacity-50">
         <Particles className="w-full h-full" quantity={100} />
       </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-400">
+      <div className="mx-auto container px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+          className="mx-auto max-w-2xl lg:text-center"
+        >
+          <motion.h2
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-2xl  font-bold leading-7 text-indigo-400"
+          >
             Technical Skills
-          </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
             Technologies I Work With
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-6 text-lg leading-8 text-gray-300"
+          >
             Passion & Expertise 🚀 I don't just write code—I craft experiences.
             My passion lies in learning, experimenting, and pushing boundaries
             to build smarter, faster, and more intuitive digital solutions.
-          </p>
-        </div>
-        <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          </motion.p>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+         
+          className="mt-16 container grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        >
           {images.map((item, index) => (
-            <div key={index} className="group flex w-full">
+            <motion.div
+              key={index}
+              className="group container flex w-full"
+              variants={boxVariant}
+             
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
+            >
               <MagicCard className="relative overflow-hidden rounded-lg bg-zinc-950 p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:bg-zinc-900 w-full">
-                <div className="flex justify-center transform transition-transform duration-300 group-hover:scale-110">
+                <motion.div
+                  className="flex justify-center"
+                  whileHover={{
+                    rotate: 360,
+                    transition: { duration: 0.6, ease: "easeInOut" },
+                  }}
+                >
                   {item.icon}
-                </div>
-                <p className="mt-4 text-center text-sm font-medium text-gray-300">
+                </motion.div>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
+                  className="mt-4 text-center text-sm font-medium text-gray-300"
+                >
                   {item.name}
-                </p>
+                </motion.p>
               </MagicCard>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

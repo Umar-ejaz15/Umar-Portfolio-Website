@@ -6,6 +6,10 @@ import { Particles } from "@/components/magicui/particles";
 import { NavigationBar } from "./components/NavigationBar";
 import WhyMe from "./components/WhyMe";
 import Skills from "./components/Skills";
+import CTA from "./components/CTA";
+import Reviews from "./components/Reviews";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 
 const Page1 = () => {
   return (
@@ -16,6 +20,11 @@ const Page1 = () => {
       <Services />
       <Skills />
       <WhyMe />
+      <Projects />
+      <Reviews />
+      {/* <CTA /> */}
+      {/* <Contact /> */}
+      <Contact/>
     </div>
   );
 };

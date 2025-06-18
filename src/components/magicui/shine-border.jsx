@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
 export function ShineBorder({
   borderWidth = 1,
   duration = 14,
-  shineColor = "#000000",
-  className,
+  shineColor = ["#8A2BE2", "#FF0000", "#FF69B4"], 
+   className,
   style,
   ...props
 }) {

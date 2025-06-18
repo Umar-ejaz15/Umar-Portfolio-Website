@@ -3,6 +3,7 @@ import { Particles } from "@/components/magicui/particles";
 import React from "react";
 import { FaCode, FaServer, FaLaptopCode, FaPaintBrush } from "react-icons/fa";
 import { BoxReveal } from "@/components/magicui/box-reveal";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const data = [
@@ -32,7 +33,10 @@ const Services = () => {
     },
   ];
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
       id="services"
       className="w-full min-h-screen bg-transparent bg-gradient-to-b from-black to-zinc-900 flex items-center justify-center py-16 px-4 relative overflow-hidden"
     >
@@ -40,23 +44,42 @@ const Services = () => {
         <Particles className="w-full h-full" quantity={100} />
       </div>
       <div className="max-w-6xl flex justify-center flex-col items-center mx-auto z-10">
-        <BoxReveal>
-          <h2 className="text-4xl font-bold text-center text-white mb-4">
-            My Services
-          </h2>
-          <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Delivering high-quality solutions tailored to your specific needs. Each service is crafted with attention to detail and modern best practices.
-          </p>
-        </BoxReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-start content-center gap-8">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <BoxReveal>
+            <h2 className="text-4xl font-bold text-center text-white mb-4">
+              My Services
+            </h2>
+            <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+              Delivering high-quality solutions tailored to your specific needs. Each service is crafted with attention to detail and modern best practices.
+            </p>
+          </BoxReveal>
+        </motion.div>
+       <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 items-start content-center gap-8"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.1, delay: 0.2 }}
+
+        >
           {data.map((item, index) => (
-            <BoxReveal key={index}>
-              <Cards data={item} />
-            </BoxReveal>
+            <motion.div
+              key={index}
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.1, delay: index * 0.1 + 0.2 }}
+            >
+              <BoxReveal>
+                <Cards data={item} />
+              </BoxReveal>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
