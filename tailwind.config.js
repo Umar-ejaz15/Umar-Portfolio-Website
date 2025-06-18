@@ -1,9 +1,11 @@
-// tailwind.config.js
 export default {
   theme: {
     extend: {
       colors: {
-        border: '#E5E7EB', // or customize as needed
+        border: '#E5E7EB',
+      },
+      borderColor: {
+        border: '#E5E7EB',
       },
     },
   },
