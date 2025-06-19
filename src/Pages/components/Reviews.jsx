@@ -10,7 +10,7 @@ const Reviews = () => {
   const locomotiveScroll = new LocomotiveScroll();
   const reviews = [
     {
-      name: "Yasor Shabahz",
+      name: "Yasir Shabahz",
       Review:
         "Exceptional service! The team went above and beyond my expectations. Their attention to detail and professional approach made the entire experience outstanding.",
       initial: "Y",

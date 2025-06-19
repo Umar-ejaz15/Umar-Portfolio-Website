@@ -60,20 +60,20 @@ const WhyMe = () => {
   return (
     <div
       id="about"
-      className="w-full min-h-screen bg-zinc-900/70 to-black relative"
+      className="w-full min-h-screen bg-zinc-900/70 to-black relative px-4 sm:px-6 lg:px-8"
     >
       <div className="absolute inset-0 w-full h-full z-0">
         <Particles className="w-full h-full" quantity={150} />
       </div>
 
-      <div className="container mx-auto px-4 py-24 relative z-10 max-w-6xl">
+      <div className="container mx-auto py-12 sm:py-16 md:py-24 relative z-10 max-w-6xl">
         <motion.div
           initial="initial"
           whileInView="whileInView"
           variants={scaleIn}
         >
           <div>
-            <h1 className="text-center text-5xl md:text-6xl font-extrabold mb-8">
+            <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold mb-4 sm:mb-8">
               <AnimatedGradientText>
                 👋 Hey, I'm Umar Ejaz - Your Full-Stack Code-Slinging Wizard
               </AnimatedGradientText>
@@ -86,7 +86,7 @@ const WhyMe = () => {
             initial="initial"
             whileInView="whileInView"
             variants={fadeInUp}
-            className="text-lg md:text-xl leading-relaxed bg-zinc-950p-8 rounded-xl backdrop-blur-sm text-gray-300"
+            className="text-base sm:text-lg md:text-xl leading-relaxed bg-zinc-950 p-4 sm:p-6 md:p-8 rounded-xl backdrop-blur-sm text-gray-300"
           >
             Tired of searching for the right developer? Well, stop scrolling
             because you just FOUND HIM. I'm like Doctor Strange but with
@@ -98,7 +98,7 @@ const WhyMe = () => {
         </div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 mt-10   items-start content-center gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 mt-6 sm:mt-8 md:mt-10 gap-4 sm:gap-6 md:gap-8"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.1, delay: 0.2 }}
@@ -116,23 +116,23 @@ const WhyMe = () => {
             </motion.div>
           ))}
         </motion.div>
-        <MagicCard className="mt-20">
+        <MagicCard className="mt-10 sm:mt-16 md:mt-20">
           <div>
             <motion.div
               initial="initial"
               whileInView="whileInView"
               variants={fadeInUp}
-              className="bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 p-8 rounded-2xl backdrop-blur-sm relative  w-full overflow-hidden"
+              className="bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 p-4 sm:p-6 md:p-8 rounded-2xl backdrop-blur-sm relative w-full overflow-hidden"
             >
-              <div className="flex flex-col md:flex-row items-start gap-6 ">
-                <span className="text-5xl bg-gradient-to-br from-zinc-700 to-zinc-800 p-6 rounded-lg shadow-xl">
+              <div className="flex flex-col md:flex-row items-start gap-4 sm:gap-6">
+                <span className="text-3xl sm:text-4xl md:text-5xl bg-gradient-to-br from-zinc-700 to-zinc-800 p-4 sm:p-6 rounded-lg shadow-xl">
                   🚀
                 </span>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-100 mb-4 bg-clip-text  bg-gradient-to-r from-blue-400 to-purple-400">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-3 sm:mb-4 bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                     Ready to Create Something Extraordinary?
                   </h3>
-                  <p className="text-lg mb-6 text-gray-300 leading-relaxed">
+                  <p className="text-base sm:text-lg mb-4 sm:mb-6 text-gray-300 leading-relaxed">
                     I don't just build websites—I create digital experiences
                     that leave a lasting impression. With expertise in the
                     complete MERN stack and a passion for clean, efficient code,
@@ -142,7 +142,7 @@ const WhyMe = () => {
                   </p>
                   <motion.p
                     whileHover={{ scale: 1.02 }}
-                    className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 cursor-pointer"
+                    className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 cursor-pointer"
                   >
                     Let's Transform Your Ideas Into Reality - Your Success Story
                     Starts Here! 🚀

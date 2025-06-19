@@ -13,25 +13,25 @@ const locomotiveScroll = new LocomotiveScroll();
       title: "Front-End Development",
       description:
         "Creating beautiful, responsive, and high-performance web applications using modern technologies like React, Next.js, and Tailwind CSS. Focused on delivering exceptional user experiences.",
-      icon: <FaCode className="text-3xl text-blue-400" />,
+      icon: <FaCode className="text-3xl sm:text-4xl text-blue-400" />,
     },
     {
       title: "Back-End Development",
       description:
         "Developing robust and scalable server-side solutions using Node.js, Express.js, and various databases. Implementing secure APIs and efficient data management systems.",
-      icon: <FaServer className="text-3xl text-green-400" />,
+      icon: <FaServer className="text-3xl sm:text-4xl text-green-400" />,
     },
     {
       title: "Full-Stack Development",
       description:
         "Comprehensive end-to-end development combining front-end and back-end expertise. Building complete web solutions from database design to user interface implementation.",
-      icon: <FaLaptopCode className="text-3xl text-purple-400" />,
+      icon: <FaLaptopCode className="text-3xl sm:text-4xl text-purple-400" />,
     },
     {
       title: "UI/UX Design",
       description:
         "Creating intuitive, aesthetically pleasing interfaces with a focus on user experience. Implementing modern design principles and conducting user research for optimal results.",
-      icon: <FaPaintBrush className="text-3xl text-pink-400" />,
+      icon: <FaPaintBrush className="text-3xl sm:text-4xl text-pink-400" />,
     },
   ];
   return (
@@ -40,7 +40,7 @@ const locomotiveScroll = new LocomotiveScroll();
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       id="services"
-      className="w-full min-h-screen bg-transparent bg-gradient-to-b from-black to-zinc-900 flex items-center justify-center py-16 px-4 relative overflow-hidden"
+      className="w-full min-h-screen bg-transparent bg-gradient-to-b from-black to-zinc-900 flex items-center justify-center py-8 sm:py-12 md:py-16 px-2 sm:px-4 relative overflow-hidden"
     >
       <div className="absolute inset-0 w-full h-full z-0 opacity-50">
         <Particles className="w-full h-full" quantity={100} />
@@ -52,20 +52,19 @@ const locomotiveScroll = new LocomotiveScroll();
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div>
-            <h2 className="text-4xl font-bold text-center text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-2 sm:mb-4">
               My Services
             </h2>
-            <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-300 text-center mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-4">
               Delivering high-quality solutions tailored to your specific needs. Each service is crafted with attention to detail and modern best practices.
             </p>
           </div>
         </motion.div>
        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 items-start content-center gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 items-start content-center gap-4 sm:gap-6 md:gap-8 w-full px-2 sm:px-4"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.1, delay: 0.2 }}
-
         >
           {data.map((item, index) => (
             <motion.div
@@ -73,8 +72,9 @@ const locomotiveScroll = new LocomotiveScroll();
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.1, delay: index * 0.1 + 0.2 }}
+              className="w-full"
             >
-              <div>
+              <div className="w-full">
                 <Cards data={item} />
               </div>
             </motion.div>

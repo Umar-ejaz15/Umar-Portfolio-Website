@@ -63,11 +63,11 @@ const Skills = () => {
   };
 
   return (
-    <div className="relative bg-zinc-900/70 py-24 sm:py-32">
+    <div className="relative bg-zinc-900/70 py-12 sm:py-16 md:py-24">
       <div className="absolute inset-0 w-full h-full z-0 opacity-50">
         <Particles className="w-full h-full" quantity={100} />
       </div>
-      <div className="mx-auto container px-6 lg:px-8">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const Skills = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl  font-bold leading-7 text-indigo-400"
+            className="text-xl sm:text-2xl font-bold leading-7 text-indigo-400"
           >
             Technical Skills
           </motion.h2>
@@ -86,7 +86,7 @@ const Skills = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-white md:text-4xl"
           >
             Technologies I Work With
           </motion.p>
@@ -94,7 +94,7 @@ const Skills = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-6 text-lg leading-8 text-gray-300"
+            className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-300"
           >
             Passion & Expertise 🚀 I don't just write code—I craft experiences.
             My passion lies in learning, experimenting, and pushing boundaries
@@ -104,19 +104,19 @@ const Skills = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          className="mt-16 container grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+          className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 gap-3 xs:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
         >
           {images.map((item, index) => (
             <motion.div
               key={index}
-              className="group container flex w-full"
+              className="group flex w-full"
               variants={boxVariant}
               whileHover={{
-                scale: 1.1,
+                scale: 1.05,
                 transition: { duration: 0.2 },
               }}
             >
-              <MagicCard className="relative overflow-hidden rounded-lg bg-zinc-950 p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:bg-zinc-900 w-full">
+              <MagicCard className="relative overflow-hidden rounded-lg bg-zinc-950 p-3 sm:p-4 md:p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:bg-zinc-900 w-full">
                 <motion.div
                   className="flex justify-center"
                   whileHover={{
@@ -124,13 +124,15 @@ const Skills = () => {
                     transition: { duration: 0.6, ease: "easeInOut" },
                   }}
                 >
-                  {item.icon}
+                  {React.cloneElement(item.icon, {
+                    size: window.innerWidth < 640 ? 40 : window.innerWidth < 768 ? 50 : 64
+                  })}
                 </motion.div>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.2 }}
-                  className="mt-4 text-center text-sm font-medium text-gray-300"
+                  className="mt-2 sm:mt-4 text-center text-xs sm:text-sm font-medium text-gray-300"
                 >
                   {item.name}
                 </motion.p>

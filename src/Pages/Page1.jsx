@@ -15,7 +15,7 @@ import LocomotiveScroll from "locomotive-scroll";
 const Page1 = () => {
   const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="bg-black text-white ">
+    <div className="bg-black text-white  overflow-hidden">
       <NavigationBar />
       <Hero />
       <About />

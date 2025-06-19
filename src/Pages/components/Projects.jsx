@@ -101,23 +101,23 @@ const Projects = () => {
 
   const ProjectCard = ({ project }) => (
     <motion.div>
-      <MagicCard className="min-w-[450px] max-w-[450px] flex-shrink-0 snap-start bg-zinc-900/50 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-800">
-        <div className="w-full h-64 mb-6 overflow-hidden rounded-lg">
+      <MagicCard className="min-w-[280px] sm:min-w-[340px] md:min-w-[400px] lg:min-w-[450px] max-w-full sm:max-w-[340px] md:max-w-[400px] lg:max-w-[450px] flex-shrink-0 snap-start bg-zinc-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-800 h-auto">
+        <div className="w-full h-48 sm:h-56 md:h-64 mb-4 sm:mb-6 overflow-hidden rounded-lg">
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <h2 className="text-2xl font-bold text-white mb-4">{project.title}</h2>
-        <p className="text-gray-300 text-base mb-6 line-clamp-4 leading-relaxed">
+        <h2 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-4">{project.title}</h2>
+        <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 line-clamp-4 leading-relaxed">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
           {project.tags.map((tag, index) => (
             <span
               key={index}
-              className="px-4 py-1.5 bg-zinc-800 text-zinc-300 rounded-full text-sm font-medium hover:bg-zinc-700 transition-colors"
+              className="px-3 sm:px-4 py-1 sm:py-1.5 bg-zinc-800 text-zinc-300 rounded-full text-xs sm:text-sm font-medium hover:bg-zinc-700 transition-colors"
             >
               {tag}
             </span>
@@ -127,7 +127,7 @@ const Projects = () => {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-6 py-3 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition-colors duration-300 w-full text-center"
+          className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition-colors duration-300 w-full text-center text-sm sm:text-base"
         >
           Live Preview
         </a>
@@ -141,8 +141,8 @@ const Projects = () => {
       whileTap={{ scale: 0.9 }}
       onClick={onClick}
       className={`absolute ${
-        direction === "left" ? "left-0 -translate-x-4" : "right-0 translate-x-4"
-      } top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white rounded-full p-4 backdrop-blur-sm transition-all duration-300`}
+        direction === "left" ? "left-0 -translate-x-2 sm:-translate-x-4" : "right-0 translate-x-2 sm:translate-x-4"
+      } top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 sm:p-4 backdrop-blur-sm transition-all duration-300 hidden sm:block`}
       aria-label={direction === "left" ? "Previous" : "Next"}
     >
       {children}
@@ -152,7 +152,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="w-full min-h-screen bg-gradient-to-b from-black to-zinc-900 relative overflow-hidden py-20"
+      className="w-full h-auto bg-gradient-to-b from-black to-zinc-900 relative overflow-hidden py-12 sm:py-20"
     >
       <div className="absolute inset-0 w-full h-full z-0 opacity-50">
         <Particles className="w-full h-full" quantity={100} />
@@ -164,7 +164,7 @@ const Projects = () => {
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-8 sm:mb-12">
             <AnimatedGradientText>Featured Projects</AnimatedGradientText>
           </h1>
         </motion.div>
@@ -173,7 +173,7 @@ const Projects = () => {
           <NavigationButton direction="left" onClick={scrollPrev}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-4 w-4 sm:h-6 sm:w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -189,7 +189,7 @@ const Projects = () => {
 
           <div
             ref={sliderRef}
-            className="flex overflow-x-hidden cursor-grab gap-8 snap-x snap-mandatory pb-8"
+            className="flex overflow-x-auto scrollbar-hide cursor-grab gap-4 sm:gap-6 md:gap-8 snap-x snap-mandatory pb-4 sm:pb-8"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -204,7 +204,7 @@ const Projects = () => {
           <NavigationButton direction="right" onClick={scrollNext}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-4 w-4 sm:h-6 sm:w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
