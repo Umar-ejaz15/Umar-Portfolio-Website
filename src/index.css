@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+
+*{
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+}

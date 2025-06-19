@@ -4,7 +4,9 @@ import { AnimatedGradientText } from "@/components/magicui/animated-gradient-tex
 import { motion } from "framer-motion";
 import { MagicCard } from "@/components/magicui/magic-card";
 
+import LocomotiveScroll from "locomotive-scroll";
 const Projects = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   const websites = [
     {
       id: 2,
@@ -98,9 +100,7 @@ const Projects = () => {
   };
 
   const ProjectCard = ({ project }) => (
-    <motion.div
-      
-    >
+    <motion.div>
       <MagicCard className="min-w-[450px] max-w-[450px] flex-shrink-0 snap-start bg-zinc-900/50 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-800">
         <div className="w-full h-64 mb-6 overflow-hidden rounded-lg">
           <img

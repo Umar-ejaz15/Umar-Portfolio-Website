@@ -22,7 +22,9 @@ import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { motion } from "framer-motion";
 
+import LocomotiveScroll from "locomotive-scroll";
 const Skills = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   const images = [
     { icon: <BiLogoMongodb size={64} color="#47A248" />, name: "MongoDB" },
     { icon: <SiMongoose size={64} color="#880000" />, name: "Mongoose" },
@@ -102,7 +104,6 @@ const Skills = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-         
           className="mt-16 container grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
         >
           {images.map((item, index) => (
@@ -110,7 +111,6 @@ const Skills = () => {
               key={index}
               className="group container flex w-full"
               variants={boxVariant}
-             
               whileHover={{
                 scale: 1.1,
                 transition: { duration: 0.2 },

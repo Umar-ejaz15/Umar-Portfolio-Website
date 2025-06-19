@@ -2,10 +2,12 @@ import Cards from "@/components/Cards";
 import { Particles } from "@/components/magicui/particles";
 import React from "react";
 import { FaCode, FaServer, FaLaptopCode, FaPaintBrush } from "react-icons/fa";
-import { BoxReveal } from "@/components/magicui/box-reveal";
 import { motion } from "framer-motion";
 
+import LocomotiveScroll from 'locomotive-scroll';
 const Services = () => {
+
+const locomotiveScroll = new LocomotiveScroll();
   const data = [
     {
       title: "Front-End Development",
@@ -49,14 +51,14 @@ const Services = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <BoxReveal>
+          <div>
             <h2 className="text-4xl font-bold text-center text-white mb-4">
               My Services
             </h2>
             <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
               Delivering high-quality solutions tailored to your specific needs. Each service is crafted with attention to detail and modern best practices.
             </p>
-          </BoxReveal>
+          </div>
         </motion.div>
        <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 items-start content-center gap-8"
@@ -72,9 +74,9 @@ const Services = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.1, delay: index * 0.1 + 0.2 }}
             >
-              <BoxReveal>
+              <div>
                 <Cards data={item} />
-              </BoxReveal>
+              </div>
             </motion.div>
           ))}
         </motion.div>

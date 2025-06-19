@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Particles } from "@/components/magicui/particles";
-import { BoxReveal } from "@/components/magicui/box-reveal";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import Cards from "@/components/Cards";
@@ -39,7 +38,9 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 };
 
+import LocomotiveScroll from "locomotive-scroll";
 const WhyMe = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <section className="relative min-h-screen bg-gradient-to-b from-black  to-zinc-900 py-24 px-4 sm:px-6 lg:px-8">
       {/* Particles */}
@@ -63,13 +64,13 @@ const WhyMe = () => {
         </motion.h2>
 
         {/* Introduction */}
-        <BoxReveal>
+        <div>
           <MagicCard className="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-900 backdrop-blur-md text-gray-300 text-lg leading-relaxed">
             In today's digital world, code alone isn't enough — you need a
             strategic partner who understands your business and translates it
             into powerful technical solutions.
           </MagicCard>
-        </BoxReveal>
+        </div>
 
         {/* Feature Cards */}
         <motion.div
@@ -85,14 +86,14 @@ const WhyMe = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.1, delay: index * 0.1 + 0.2 }}
             >
-              <BoxReveal>
+              <div>
                 <Cards data={item} />
-              </BoxReveal>
+              </div>
             </motion.div>
           ))}
         </motion.div>
         {/* Final CTA Section */}
-        <BoxReveal>
+        <div>
           <MagicCard className="p-10 rounded-3xl bg-gradient-to-br from-zinc-900/90 to-zinc-800/80 border border-zinc-700/50 backdrop-blur-xl">
             <div className="flex flex-col md:flex-row items-start gap-6">
               <span className="text-4xl animate-pulse">💫</span>
@@ -114,7 +115,7 @@ const WhyMe = () => {
               </div>
             </div>
           </MagicCard>
-        </BoxReveal>
+        </div>
       </div>
     </section>
   );

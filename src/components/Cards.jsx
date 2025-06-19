@@ -3,7 +3,6 @@ import { MagicCard } from "./magicui/magic-card";
 import { ShineBorder } from "./magicui/shine-border";
 import { BorderBeam } from "./ui/border-beam";
 import { motion } from "framer-motion";
-import { BoxReveal } from "./magicui/box-reveal";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 50 },

@@ -1,4 +1,3 @@
-import { BoxReveal } from "@/components/magicui/box-reveal";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Particles } from "@/components/magicui/particles";
 import React from "react";
@@ -6,7 +5,9 @@ import { FaUserCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
+import LocomotiveScroll from "locomotive-scroll";
 const Reviews = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   const reviews = [
     {
       name: "Yasor Shabahz",
@@ -39,9 +40,9 @@ const Reviews = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
-      }
-    }
+        staggerChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -50,13 +51,13 @@ const Reviews = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -66,7 +67,7 @@ const Reviews = () => {
         <Particles className="w-full h-full" quantity={100} />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -74,24 +75,21 @@ const Reviews = () => {
         >
           Client Reviews
         </motion.h2>
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2"
         >
           {reviews.map((review, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-            >
-              <BoxReveal className="h-[300px]">
+            <motion.div key={index} variants={itemVariants}>
+              <div className="h-[300px]">
                 <MagicCard className="bg-zinc-950 p-6 shadow-md h-full flex flex-col border border-zinc-700/50 hover:border-zinc-500/50 transition-colors duration-300 backdrop-blur-sm">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.05 }}
                     className="flex items-center mb-4"
                   >
-                    <motion.div 
+                    <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.5 }}
                       className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg"
@@ -99,18 +97,22 @@ const Reviews = () => {
                       {review.initial}
                     </motion.div>
                     <div className="ml-4">
-                      <h3 className="font-semibold text-white">{review.name}</h3>
+                      <h3 className="font-semibold text-white">
+                        {review.name}
+                      </h3>
                     </div>
                   </motion.div>
-                  <p className="text-gray-300 flex-grow leading-relaxed">{review.Review}</p>
+                  <p className="text-gray-300 flex-grow leading-relaxed">
+                    {review.Review}
+                  </p>
                 </MagicCard>
-              </BoxReveal>
+              </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
       <div>
-           <div className="absolute inset-0 w-full h-full z-0 opacity-50">
+        <div className="absolute inset-0 w-full h-full z-0 opacity-50">
           <Particles className="w-full h-full" quantity={100} />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -118,11 +120,11 @@ const Reviews = () => {
             Ready to Get Started?
           </h2>
           <p className="mt-4 text-xl text-gray-300">
-            Join us today and discover how we can help transform your experience.
+            Join us today and discover how we can help transform your
+            experience.
           </p>
           <InteractiveHoverButton className="mt-10">
-            
-              Book a Call
+            Book a Call
           </InteractiveHoverButton>
         </div>
       </div>

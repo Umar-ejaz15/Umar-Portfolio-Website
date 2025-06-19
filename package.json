@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "cobe": "^0.6.4",
     "framer-motion": "^12.18.1",
+    "locomotive-scroll": "^5.0.0-beta.21",
     "lucide-react": "^0.517.0",
     "motion": "^12.18.1",
     "react": "^19.1.0",

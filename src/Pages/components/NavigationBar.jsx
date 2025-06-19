@@ -11,9 +11,7 @@ import {
 
 export const NavigationBar = () => {
   return (
-    <Dock
-      className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
-    >
+    <Dock className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
       <DockIcon
         href="#home"
         title="Home"
@@ -23,7 +21,7 @@ export const NavigationBar = () => {
           if (element) element.scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <Home size={28} />
+        <Home size={25} />
       </DockIcon>
       <DockIcon
         href="#about"
@@ -34,7 +32,7 @@ export const NavigationBar = () => {
           if (element) element.scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <User size={28} />
+        <User size={25} />
       </DockIcon>
       <DockIcon
         href="#services"
@@ -45,7 +43,7 @@ export const NavigationBar = () => {
           if (element) element.scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <Code size={28} />
+        <Code size={25} />
       </DockIcon>
       <DockIcon
         href="#projects"
@@ -56,7 +54,7 @@ export const NavigationBar = () => {
           if (element) element.scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <Briefcase size={28} />
+        <Briefcase size={25} />
       </DockIcon>
       <DockIcon
         href="#contact"
@@ -67,7 +65,7 @@ export const NavigationBar = () => {
           if (element) element.scrollIntoView({ behavior: "smooth" });
         }}
       >
-        <Mail size={28} />
+        <Mail size={25} />
       </DockIcon>
 
       <DockIcon
@@ -78,7 +76,7 @@ export const NavigationBar = () => {
           window.open("https://github.com", "_blank");
         }}
       >
-        <Github size={28} />
+        <Github size={25} />
       </DockIcon>
       <DockIcon
         href="https://linkedin.com"
@@ -88,7 +86,7 @@ export const NavigationBar = () => {
           window.open("https://linkedin.com", "_blank");
         }}
       >
-        <Linkedin size={28} />
+        <Linkedin size={25} />
       </DockIcon>
     </Dock>
   );

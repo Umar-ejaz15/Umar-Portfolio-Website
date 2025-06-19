@@ -11,7 +11,9 @@ import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 
+import LocomotiveScroll from "locomotive-scroll";
 const Page1 = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <div className="bg-black text-white ">
       <NavigationBar />
@@ -24,7 +26,7 @@ const Page1 = () => {
       <Reviews />
       {/* <CTA /> */}
       {/* <Contact /> */}
-      <Contact/>
+      <Contact />
     </div>
   );
 };

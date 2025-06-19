@@ -10,7 +10,9 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import React from "react";
 
+import LocomotiveScroll from "locomotive-scroll";
 const Hero = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <section
       id="home"
@@ -31,9 +33,11 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-8xl font-light leading-tight  bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-300"
+            className="text-4xl sm:text-5xl md:text-6xl font-light leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-300"
           >
-            Hi, I'm <AnimatedGradientText className="font-bold">Umar Ejaz</AnimatedGradientText>
+            <AnimatedGradientText className="font-bold">
+              Transforming Ideas Into Reality
+            </AnimatedGradientText>
           </motion.h1>
         </BoxReveal>
         <BoxReveal>
@@ -43,8 +47,8 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-light text-zinc-300 mb-8">
-              Full Stack Developer
-            </h2>{" "}
+              <TypingAnimation text="Into Digital Reality" />
+            </h2>
           </motion.div>
         </BoxReveal>
         <BoxReveal>
@@ -54,9 +58,9 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-lg sm:text-xl text-zinc-400 mb-10 mx-auto max-w-2xl leading-relaxed"
           >
-            I build modern, scalable web applications with a focus on clean
-            design and efficient functionality. Passionate about creating
-            seamless user experiences.
+            Crafting powerful web solutions with the MERN stack. From concept to
+            deployment, bringing your vision to life with modern technologies
+            and innovative approaches.
           </motion.p>
         </BoxReveal>
         <BoxReveal>
@@ -71,10 +75,10 @@ const Hero = () => {
               variant="default"
               className="bg-white text-black hover:bg-black hover:text-white transition-all duration-300 transform"
             >
-              Book a Call
+              Start a Project
             </InteractiveHoverButton>
             <ShimmerButton className="transform hover:scale-105 transition-transform duration-300">
-              View My Work
+              <a href="#projects"> Explore Projects</a>
             </ShimmerButton>
           </motion.div>
         </BoxReveal>

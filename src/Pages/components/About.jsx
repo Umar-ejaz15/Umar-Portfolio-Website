@@ -1,13 +1,14 @@
 import { Particles } from "@/components/magicui/particles";
 import React from "react";
 import { motion } from "framer-motion";
-import { BoxReveal } from "@/components/magicui/box-reveal";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import Cards from "@/components/Cards";
 
+import LocomotiveScroll from "locomotive-scroll";
 const WhyMe = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     whileInView: { opacity: 1, y: 0 },
@@ -71,16 +72,16 @@ const WhyMe = () => {
           whileInView="whileInView"
           variants={scaleIn}
         >
-          <BoxReveal>
+          <div>
             <h1 className="text-center text-5xl md:text-6xl font-extrabold mb-8">
               <AnimatedGradientText>
                 👋 Hey, I'm Umar Ejaz - Your Full-Stack Code-Slinging Wizard
               </AnimatedGradientText>
             </h1>
-          </BoxReveal>
+          </div>
         </motion.div>
 
-        <BoxReveal>
+        <div>
           <motion.p
             initial="initial"
             whileInView="whileInView"
@@ -94,9 +95,9 @@ const WhyMe = () => {
             into something FUNCTIONAL, BEAUTIFUL, and PROFITABLE? You're in the
             right place.
           </motion.p>
-        </BoxReveal>
+        </div>
 
-       <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 mt-10   items-start content-center gap-8"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -109,14 +110,14 @@ const WhyMe = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.1, delay: index * 0.1 + 0.2 }}
             >
-              <BoxReveal>
+              <div>
                 <Cards data={item} />
-              </BoxReveal>
+              </div>
             </motion.div>
           ))}
         </motion.div>
         <MagicCard className="mt-20">
-          <BoxReveal>
+          <div>
             <motion.div
               initial="initial"
               whileInView="whileInView"
@@ -149,7 +150,7 @@ const WhyMe = () => {
                 </div>
               </div>
             </motion.div>
-          </BoxReveal>
+          </div>
         </MagicCard>
       </div>
     </div>
