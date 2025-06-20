@@ -11,8 +11,9 @@ import { cn } from "@/lib/utils";
 export function ShineBorder({
   borderWidth = 1,
   duration = 14,
-  shineColor = ["#8A2BE2", "#FF0000", "#FF69B4"], 
-   className,
+  colorFrom = "#4F46E5",
+  colorTo = "#E935C1",
+  className,
   style,
   ...props
 }) {
@@ -22,12 +23,12 @@ export function ShineBorder({
         {
           "--border-width": `${borderWidth}px`,
           "--duration": `${duration}s`,
+          "--color-from": colorFrom,
+          "--color-to": colorTo,
+          "--bg-size": "200%",
 
-          backgroundImage: `radial-gradient(transparent,transparent, ${
-            Array.isArray(shineColor) ? shineColor.join(",") : shineColor
-          },transparent,transparent)`,
-
-          backgroundSize: "300% 300%",
+          backgroundImage: `linear-gradient(to right, var(--color-from), var(--color-to), var(--color-from))`,
+          backgroundSize: "var(--bg-size) 100%",
           mask: `linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`,
           WebkitMask: `linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`,
           WebkitMaskComposite: "xor",
@@ -37,7 +38,7 @@ export function ShineBorder({
         }
       }
       className={cn(
-        "pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position] motion-safe:animate-shine",
+        "pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position] motion-safe:animate-gradient",
         className
       )}
       {...props} />

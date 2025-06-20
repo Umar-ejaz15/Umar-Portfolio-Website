@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import {
   FaReact,
   FaNodeJs,
@@ -20,11 +21,11 @@ import {
 } from "react-icons/si";
 import { Particles } from "@/components/magicui/particles";
 import { MagicCard } from "@/components/magicui/magic-card";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { ShineBorder } from "@/components/magicui/shine-border";
 
-import LocomotiveScroll from "locomotive-scroll";
 const Skills = () => {
-  const locomotiveScroll = new LocomotiveScroll();
   const images = [
     { icon: <BiLogoMongodb size={64} color="#47A248" />, name: "MongoDB" },
     { icon: <SiMongoose size={64} color="#880000" />, name: "Mongoose" },
@@ -32,10 +33,7 @@ const Skills = () => {
     { icon: <FaReact size={64} color="#61DAFB" />, name: "React" },
     { icon: <FaNodeJs size={64} color="#339933" />, name: "Node.js" },
     { icon: <FaJs size={64} color="#F7DF1E" />, name: "JavaScript" },
-    {
-      icon: <BiLogoTailwindCss size={64} color="#06B6D4" />,
-      name: "Tailwind CSS",
-    },
+    { icon: <BiLogoTailwindCss size={64} color="#06B6D4" />, name: "Tailwind CSS" },
     { icon: <FaBootstrap size={64} color="#7952B3" />, name: "Bootstrap" },
     { icon: <SiFramer size={64} color="#0055FF" />, name: "Framer Motion" },
     { icon: <SiRedux size={64} color="#764ABC" />, name: "Redux Toolkit" },
@@ -47,101 +45,136 @@ const Skills = () => {
     { icon: <SiFigma size={64} color="#F24E1E" />, name: "Figma" },
   ];
 
-  const boxVariant = {
-    hidden: {
-      opacity: 0,
-      scale: 0.5,
-    },
+  const containerVariants = {
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      scale: 1,
       transition: {
-        duration: 0.8,
-        ease: [0, 0.71, 0.2, 1.01],
+        staggerChildren: 0.1,
       },
     },
   };
 
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
+
+  const [windowWidth, setWindowWidth] = React.useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
   return (
-    <div className="relative bg-zinc-900/70 py-12 sm:py-16 md:py-24">
-      <div className="absolute inset-0 w-full h-full z-0 opacity-50">
-        <Particles className="w-full h-full" quantity={100} />
-      </div>
-      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-          className="mx-auto max-w-2xl lg:text-center"
-        >
-          <motion.h2
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl sm:text-2xl font-bold leading-7 text-indigo-400"
+    <>
+      <Helmet>
+        <title>Technical Skills | Umar - Web Developer Portfolio</title>
+        <meta name="description" content="Explore my technical skills and expertise in web development including React, Node.js, MongoDB, and more. Full-stack developer proficient in modern web technologies." />
+        <meta name="keywords" content="web development, React, Node.js, MongoDB, JavaScript, full-stack developer, Umar, technical skills, programming" />
+        <meta property="og:title" content="Technical Skills | Umar - Web Developer Portfolio" />
+        <meta property="og:description" content="Explore my technical skills and expertise in web development including React, Node.js, MongoDB, and more." />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+      <div className="relative min-h-screen bg-gradient-to-b from-zinc-900 to-black py-16 sm:py-24">
+        <div className="absolute inset-0 w-full h-full z-0 opacity-30">
+          <Particles className="w-full h-full" quantity={150} />
+        </div>
+        <div className="relative z-10 mx-auto container px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, type: "spring" }}
+            className="mx-auto max-w-3xl text-center space-y-8"
           >
-            Technical Skills
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-white md:text-4xl"
-          >
-            Technologies I Work With
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-300"
-          >
-            Passion & Expertise 🚀 I don't just write code—I craft experiences.
-            My passion lies in learning, experimenting, and pushing boundaries
-            to build smarter, faster, and more intuitive digital solutions.
-          </motion.p>
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 gap-3 xs:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-        >
-          {images.map((item, index) => (
+            <AnimatedGradientText>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
+                Technical Skills
+              </h1>
+            </AnimatedGradientText>
             <motion.div
-              key={index}
-              className="group flex w-full"
-              variants={boxVariant}
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.2 },
-              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="space-y-6"
             >
-              <MagicCard className="relative overflow-hidden rounded-lg bg-zinc-950 p-3 sm:p-4 md:p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:bg-zinc-900 w-full">
-                <motion.div
-                  className="flex justify-center"
-                  whileHover={{
-                    rotate: 360,
-                    transition: { duration: 0.6, ease: "easeInOut" },
-                  }}
-                >
-                  {React.cloneElement(item.icon, {
-                    size: window.innerWidth < 640 ? 40 : window.innerWidth < 768 ? 50 : 64
-                  })}
-                </motion.div>
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.2 }}
-                  className="mt-2 sm:mt-4 text-center text-xs sm:text-sm font-medium text-gray-300"
-                >
-                  {item.name}
-                </motion.p>
-              </MagicCard>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                Technologies I Work With
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                Passion & Expertise 🚀 I don't just write code—I craft experiences.
+                My passion lies in learning, experimenting, and pushing boundaries
+                to build smarter, faster, and more intuitive digital solutions.
+              </p>
             </motion.div>
-          ))}
-        </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+           
+            className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+          >
+            <AnimatePresence>
+              {images.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  className="group"
+                >
+                  <div className="relative">
+                    <MagicCard className="relative h-full overflow-hidden rounded-xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 p-4 backdrop-blur-sm transition-all duration-300 hover:from-zinc-700/50 hover:to-zinc-800/50">
+                      <motion.div
+                        className="flex items-center justify-center p-4"
+                        whileHover={{
+                          rotate: 360,
+                          scale: 1.2,
+                          transition: { duration: 0.6, ease: "easeInOut" },
+                        }}
+                      >
+                        {React.cloneElement(item.icon, {
+                          size: windowWidth < 640 ? 40 : windowWidth < 768 ? 50 : 64,
+                        })}
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-4 text-center"
+                      >
+                        <p className="text-sm sm:text-base font-semibold text-gray-200 group-hover:text-white transition-colors">
+                          {item.name}
+                        </p>
+                      </motion.div>
+                    </MagicCard>
+                    <ShineBorder className="absolute inset-0 rounded-xl" />
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

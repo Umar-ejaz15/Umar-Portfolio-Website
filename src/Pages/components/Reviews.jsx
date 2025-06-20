@@ -4,10 +4,10 @@ import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { ShineBorder } from "@/components/magicui/shine-border";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 
-import LocomotiveScroll from "locomotive-scroll";
 const Reviews = () => {
-  const locomotiveScroll = new LocomotiveScroll();
   const reviews = [
     {
       name: "Yasir Shabahz",
@@ -68,12 +68,12 @@ const Reviews = () => {
       </div>
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         <motion.h2
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-3xl font-bold text-center mb-8 text-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center text-3xl sm:text-4xl mb-10 md:text-5xl font-extrabold"
         >
-          Client Reviews
+          <AnimatedGradientText>Clients Reviews</AnimatedGradientText>
         </motion.h2>
         <motion.div
           variants={containerVariants}

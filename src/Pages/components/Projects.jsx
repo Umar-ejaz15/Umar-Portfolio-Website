@@ -3,10 +3,15 @@ import { Particles } from "@/components/magicui/particles";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { motion } from "framer-motion";
 import { MagicCard } from "@/components/magicui/magic-card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 
-import LocomotiveScroll from "locomotive-scroll";
 const Projects = () => {
-  const locomotiveScroll = new LocomotiveScroll();
   const websites = [
     {
       id: 2,
@@ -64,44 +69,9 @@ const Projects = () => {
     },
   ];
 
-  const [isDragging, setIsDragging] = React.useState(false);
-  const [startX, setStartX] = React.useState(0);
-  const [scrollLeft, setScrollLeft] = React.useState(0);
-  const sliderRef = React.useRef(null);
-
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = x - startX;
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const scrollNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollLeft += sliderRef.current.offsetWidth;
-    }
-  };
-
-  const scrollPrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollLeft -= sliderRef.current.offsetWidth;
-    }
-  };
-
-  const ProjectCard = ({ project }) => (
-    <motion.div>
-      <MagicCard className="min-w-[280px] sm:min-w-[340px] md:min-w-[400px] lg:min-w-[450px] max-w-full sm:max-w-[340px] md:max-w-[400px] lg:max-w-[450px] flex-shrink-0 snap-start bg-zinc-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-800 h-auto">
+  const ProjectCard = ({ project }) => {
+    return (
+      <MagicCard className="w-full bg-zinc-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-800 h-auto">
         <div className="w-full h-48 sm:h-56 md:h-64 mb-4 sm:mb-6 overflow-hidden rounded-lg">
           <img
             src={project.image}
@@ -109,7 +79,9 @@ const Projects = () => {
             className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <h2 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-4">{project.title}</h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-4">
+          {project.title}
+        </h2>
         <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 line-clamp-4 leading-relaxed">
           {project.description}
         </p>
@@ -127,30 +99,16 @@ const Projects = () => {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition-colors duration-300 w-full text-center text-sm sm:text-base"
+          className="w-full"
         >
-          Live Preview
+          <RainbowButton className="w-full">Live Preview</RainbowButton>
         </a>
       </MagicCard>
-    </motion.div>
-  );
-
-  const NavigationButton = ({ direction, onClick, children }) => (
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      onClick={onClick}
-      className={`absolute ${
-        direction === "left" ? "left-0 -translate-x-2 sm:-translate-x-4" : "right-0 translate-x-2 sm:translate-x-4"
-      } top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 sm:p-4 backdrop-blur-sm transition-all duration-300 hidden sm:block`}
-      aria-label={direction === "left" ? "Previous" : "Next"}
-    >
-      {children}
-    </motion.button>
-  );
+    );
+  };
 
   return (
-    <div
+    <section
       id="projects"
       className="w-full h-auto bg-gradient-to-b from-black to-zinc-900 relative overflow-hidden py-12 sm:py-20"
     >
@@ -169,57 +127,40 @@ const Projects = () => {
           </h1>
         </motion.div>
 
-        <div className="relative">
-          <NavigationButton direction="left" onClick={scrollPrev}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 sm:h-6 sm:w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          navigation={true}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="mySwiper"
+          style={{
+            padding: "50px 0",
+          }}
+        >
+          {websites.map((project) => (
+            <SwiperSlide
+              key={project.id}
+              style={{
+                width: "450px",
+                backgroundColor: "transparent",
+              }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </NavigationButton>
-
-          <div
-            ref={sliderRef}
-            className="flex overflow-x-auto scrollbar-hide cursor-grab gap-4 sm:gap-6 md:gap-8 snap-x snap-mandatory pb-4 sm:pb-8"
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
-            style={{ scrollBehavior: "smooth" }}
-          >
-            {websites.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-
-          <NavigationButton direction="right" onClick={scrollNext}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 sm:h-6 sm:w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </NavigationButton>
-        </div>
+              <ProjectCard project={project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

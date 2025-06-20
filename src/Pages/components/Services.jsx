@@ -3,11 +3,9 @@ import { Particles } from "@/components/magicui/particles";
 import React from "react";
 import { FaCode, FaServer, FaLaptopCode, FaPaintBrush } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 
-import LocomotiveScroll from 'locomotive-scroll';
 const Services = () => {
-
-const locomotiveScroll = new LocomotiveScroll();
   const data = [
     {
       title: "Front-End Development",
@@ -52,15 +50,19 @@ const locomotiveScroll = new LocomotiveScroll();
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-2 sm:mb-4">
-              My Services
-            </h2>
+            <div>
+              <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold mb-4 sm:mb-8">
+                <AnimatedGradientText>My Services</AnimatedGradientText>
+              </h1>
+            </div>
             <p className="text-sm sm:text-base text-gray-300 text-center mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-4">
-              Delivering high-quality solutions tailored to your specific needs. Each service is crafted with attention to detail and modern best practices.
+              Delivering high-quality solutions tailored to your specific needs.
+              Each service is crafted with attention to detail and modern best
+              practices.
             </p>
           </div>
         </motion.div>
-       <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 items-start content-center gap-4 sm:gap-6 md:gap-8 w-full px-2 sm:px-4"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
