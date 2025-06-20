@@ -10,6 +10,5 @@ createRoot(document.getElementById("root")).render(
       <App />
       <Analytics />
     </StrictMode>
-    ,
   </>
 );
