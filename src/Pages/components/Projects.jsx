@@ -131,19 +131,19 @@ const Projects = () => {
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={"auto"}
+          slidesPerView={"2"}
           breakpoints={{
             320: {
               slidesPerView: 1,
               spaceBetween: 20
             },
             640: {
-              slidesPerView: "auto",
-              spaceBetween: 30
+              slidesPerView: "2",
+              spaceBetween: 10
             },
             1024: {
-              slidesPerView: "auto",
-              spaceBetween: 40
+              slidesPerView: "2",
+              spaceBetween: 10
             }
           }}
           coverflowEffect={{
