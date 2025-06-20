@@ -45,15 +45,7 @@ const WhyMe = () => {
   const locomotiveScroll = new LocomotiveScroll();
   return (
     <>
-      <Helmet>
-        <title>Why Choose Me | Umar Web Developer Portfolio</title>
-        <meta name="description" content="Discover why Umar is your ideal web development partner. Offering innovative solutions, collaborative approach, quality performance, and impactful results for your digital needs." />
-        <meta name="keywords" content="web developer, innovative solutions, collaborative approach, quality performance, Umar portfolio, web development services" />
-        <meta property="og:title" content="Why Choose Me | Umar Web Developer Portfolio" />
-        <meta property="og:description" content="Discover why Umar is your ideal web development partner. Offering innovative solutions, collaborative approach, quality performance, and impactful results." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://your-portfolio-url.com/why-me" />
-      </Helmet>
+    
       <section className="relative min-h-screen bg-gradient-to-b from-black to-zinc-900 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
         {/* Particles */}
         <div className="absolute inset-0 w-full h-full z-0 opacity-50">

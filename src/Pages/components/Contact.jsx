@@ -7,15 +7,7 @@ import { Helmet } from "react-helmet";
 const Contact = () => {
   return (
     <>
-      <Helmet>
-        <title>Contact Umar | Web Developer Portfolio</title>
-        <meta name="description" content="Get in touch with Umar, a professional web developer. Connect through social media or send a direct message to discuss your web development needs." />
-        <meta name="keywords" content="contact umar, web developer contact, hire web developer, professional web development, portfolio contact" />
-        <meta property="og:title" content="Contact Umar | Web Developer Portfolio" />
-        <meta property="og:description" content="Get in touch with Umar, a professional web developer. Connect through social media or send a direct message." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourwebsite.com/contact" />
-      </Helmet>
+      
       <section
         id="contact"
         className="relative min-h-screen overflow-hidden bg-gradient-to-b from-zinc-900 to-black py-24 px-4 sm:px-6 lg:px-8"

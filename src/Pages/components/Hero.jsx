@@ -14,32 +14,7 @@ import { Helmet } from "react-helmet";
 const Hero = () => {
   return (
     <>
-      <Helmet>
-        <title>Umar - Full Stack Web Developer</title>
-        <meta
-          name="description"
-          content="Umar is a Full Stack Web Developer specializing in MERN stack development. Transforming ideas into digital reality with modern web solutions."
-        />
-        <meta
-          name="keywords"
-          content="web developer, MERN stack, full stack developer, React developer, Node.js developer, portfolio, Umar"
-        />
-        <meta
-          property="og:title"
-          content="Umar - Full Stack Web Developer Portfolio"
-        />
-        <meta
-          property="og:description"
-          content="Transforming ideas into digital reality with modern web solutions and MERN stack development."
-        />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Umar - Full Stack Web Developer" />
-        <meta
-          name="twitter:description"
-          content="Full Stack Web Developer specializing in MERN stack development. View my portfolio and projects."
-        />
-      </Helmet>
+    
       <section
         id="home"
         className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 py-10 sm:py-20 transition-all relative overflow-hidden bg-gradient-to-b from-black to-zinc-900"

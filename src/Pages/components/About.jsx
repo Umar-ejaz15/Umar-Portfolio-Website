@@ -59,17 +59,7 @@ const WhyMe = () => {
 
   return (
     <>
-      <Helmet>
-        <title>About Me - Umar Ejaz | Full Stack Developer</title>
-        <meta name="description" content="Full-stack developer specializing in MERN stack development. Expert in MongoDB, Express.js, React, and Node.js with a focus on clean, efficient, and scalable code." />
-        <meta name="keywords" content="Umar Ejaz, Full Stack Developer, MERN Stack, Web Development, JavaScript, React Developer, Node.js Developer" />
-        <meta property="og:title" content="About Me - Umar Ejaz | Full Stack Developer" />
-        <meta property="og:description" content="Full-stack developer specializing in MERN stack development. Expert in MongoDB, Express.js, React, and Node.js with a focus on clean, efficient, and scalable code." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Me - Umar Ejaz | Full Stack Developer" />
-        <meta name="twitter:description" content="Full-stack developer specializing in MERN stack development. Expert in MongoDB, Express.js, React, and Node.js with a focus on clean, efficient, and scalable code." />
-      </Helmet>
+    
       <div
         id="about"
         className="w-full min-h-screen bg-zinc-900/70 to-black relative px-4 sm:px-6 lg:px-8"

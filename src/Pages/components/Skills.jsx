@@ -85,14 +85,7 @@ const Skills = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Technical Skills | Umar - Web Developer Portfolio</title>
-        <meta name="description" content="Explore my technical skills and expertise in web development including React, Node.js, MongoDB, and more. Full-stack developer proficient in modern web technologies." />
-        <meta name="keywords" content="web development, React, Node.js, MongoDB, JavaScript, full-stack developer, Umar, technical skills, programming" />
-        <meta property="og:title" content="Technical Skills | Umar - Web Developer Portfolio" />
-        <meta property="og:description" content="Explore my technical skills and expertise in web development including React, Node.js, MongoDB, and more." />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+     
       <div className="relative min-h-screen bg-gradient-to-b from-zinc-900 to-black py-16 sm:py-24">
         <div className="absolute inset-0 w-full h-full z-0 opacity-30">
           <Particles className="w-full h-full" quantity={150} />
