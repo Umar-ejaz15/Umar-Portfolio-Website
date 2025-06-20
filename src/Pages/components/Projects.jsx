@@ -132,6 +132,20 @@ const Projects = () => {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            640: {
+              slidesPerView: "auto",
+              spaceBetween: 30
+            },
+            1024: {
+              slidesPerView: "auto",
+              spaceBetween: 40
+            }
+          }}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -151,9 +165,10 @@ const Projects = () => {
             <SwiperSlide
               key={project.id}
               style={{
-                width: "450px",
+                width: "min(450px, 100%)",
                 backgroundColor: "transparent",
               }}
+              className="px-4 sm:px-0"
             >
               <ProjectCard project={project} />
             </SwiperSlide>
