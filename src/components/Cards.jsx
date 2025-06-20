@@ -11,13 +11,13 @@ const fadeInUp = {
 
 const Cards = ({ data }) => {
   return (
-    <MagicCard className="group relative w-full border border-purple-400/20 hover:border-purple-700/20 h-full bg-zinc-950/90 backdrop-blur-sm rounded-xl transition-all duration-300">
+    <MagicCard className="group relative w-full border border-purple-400/20 hover:border-purple-700/20 h-full bg-zinc-950/90 backdrop-blur-sm rounded-2xl transition-all duration-300">
       <motion.div
         initial="initial"
         whileInView="animate"
         variants={fadeInUp}
         transition={{ duration: 0.5 }}
-        className="flex flex-col px-8 py-6 md:flex-row items-start gap-6 relative z-10"
+        className="flex flex-col px-8 py-6 rounded-xl md:flex-row items-start gap-6 relative z-10"
       >
         <span className="text-4xl bg-gradient-to-br from-zinc-800 to-zinc-900 p-4 rounded-lg shadow-xl transform group-hover:scale-110 transition-transform duration-300">
           {data.icon}
@@ -30,8 +30,8 @@ const Cards = ({ data }) => {
             {data.description}
           </p>
         </div>
-      </motion.div>
       <ShineBorder className="!border-purple-400/20 w-full" />
+      </motion.div>
     </MagicCard>
   );
 };
