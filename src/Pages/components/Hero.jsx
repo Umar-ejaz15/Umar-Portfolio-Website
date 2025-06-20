@@ -16,14 +16,29 @@ const Hero = () => {
     <>
       <Helmet>
         <title>Umar - Full Stack Web Developer</title>
-        <meta name="description" content="Umar is a Full Stack Web Developer specializing in MERN stack development. Transforming ideas into digital reality with modern web solutions." />
-        <meta name="keywords" content="web developer, MERN stack, full stack developer, React developer, Node.js developer, portfolio, Umar" />
-        <meta property="og:title" content="Umar - Full Stack Web Developer Portfolio" />
-        <meta property="og:description" content="Transforming ideas into digital reality with modern web solutions and MERN stack development." />
+        <meta
+          name="description"
+          content="Umar is a Full Stack Web Developer specializing in MERN stack development. Transforming ideas into digital reality with modern web solutions."
+        />
+        <meta
+          name="keywords"
+          content="web developer, MERN stack, full stack developer, React developer, Node.js developer, portfolio, Umar"
+        />
+        <meta
+          property="og:title"
+          content="Umar - Full Stack Web Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Transforming ideas into digital reality with modern web solutions and MERN stack development."
+        />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Umar - Full Stack Web Developer" />
-        <meta name="twitter:description" content="Full Stack Web Developer specializing in MERN stack development. View my portfolio and projects." />
+        <meta
+          name="twitter:description"
+          content="Full Stack Web Developer specializing in MERN stack development. View my portfolio and projects."
+        />
       </Helmet>
       <section
         id="home"
@@ -69,9 +84,9 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="text-lg sm:text-xl text-zinc-400 mb-10 mx-auto max-w-2xl leading-relaxed"
             >
-              Crafting powerful web solutions with the MERN stack. From concept to
-              deployment, bringing your vision to life with modern technologies
-              and innovative approaches.
+              Crafting powerful web solutions with the MERN stack. From concept
+              to deployment, bringing your vision to life with modern
+              technologies and innovative approaches.
             </motion.p>
           </BoxReveal>
           <BoxReveal>
@@ -86,7 +101,12 @@ const Hero = () => {
                 variant="default"
                 className="text-black font-bold"
               >
-                Start a Project
+                <a
+                  href="https://calendly.com/umar-senpaiiii/30min"
+                  target="_blank"
+                >
+                  Book A Call
+                </a>
               </RainbowButton>
               <ShimmerButton className="transform hover:scale-105 transition-transform duration-300">
                 <a href="#projects"> Explore Projects</a>

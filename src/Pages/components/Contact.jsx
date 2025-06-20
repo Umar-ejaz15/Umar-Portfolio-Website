@@ -40,7 +40,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-col gap-8">
               <motion.a
-                href="https://github.com"
+                href="https://github.com/Umar-ejaz15"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-white hover:text-zinc-400 transition-all transform hover:translate-x-2"
@@ -52,7 +52,7 @@ const Contact = () => {
                 <span className="text-lg">GitHub</span>
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/umar-ejaz-6734402b1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-white hover:text-zinc-400 transition-all transform hover:translate-x-2"
@@ -63,30 +63,8 @@ const Contact = () => {
                 <FaLinkedin className="w-6 h-6 mr-4" />
                 <span className="text-lg">LinkedIn</span>
               </motion.a>
-              <motion.a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-white hover:text-zinc-400 transition-all transform hover:translate-x-2"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <FaTwitter className="w-6 h-6 mr-4" />
-                <span className="text-lg">Twitter</span>
-              </motion.a>
-              <motion.a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-white hover:text-zinc-400 transition-all transform hover:translate-x-2"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                <FaInstagram className="w-6 h-6 mr-4" />
-                <span className="text-lg">Instagram</span>
-              </motion.a>
+             
+              
             </div>
           </motion.div>
 

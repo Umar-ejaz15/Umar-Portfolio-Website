@@ -73,7 +73,7 @@ export const NavigationBar = () => {
         target="_blank"
         title="GitHub Profile"
         onClick={(e) => {
-          window.open("https://github.com", "_blank");
+          window.open("https://github.com/Umar-ejaz15", "_blank");
         }}
       >
         <Github size={25} />
@@ -83,7 +83,7 @@ export const NavigationBar = () => {
         target="_blank"
         title="LinkedIn Profile"
         onClick={(e) => {
-          window.open("https://linkedin.com", "_blank");
+          window.open("https://www.linkedin.com/in/umar-ejaz-6734402b1/", "_blank");
         }}
       >
         <Linkedin size={25} />

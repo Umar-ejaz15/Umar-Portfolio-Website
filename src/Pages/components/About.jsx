@@ -6,6 +6,7 @@ import { MagicCard } from "@/components/magicui/magic-card";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import Cards from "@/components/Cards";
 import { Helmet } from "react-helmet";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 const WhyMe = () => {
   const fadeInUp = {
