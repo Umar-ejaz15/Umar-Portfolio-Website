@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Services from "./components/Services";
 import { Particles } from "@/components/magicui/particles";
 import { NavigationBar } from "./components/NavigationBar";
@@ -13,6 +12,7 @@ import Projects from "./components/Projects";
 import { Helmet } from "react-helmet";
 
 import LocomotiveScroll from "locomotive-scroll";
+import About from "./components/About";
 const Page1 = () => {
   const locomotiveScroll = new LocomotiveScroll();
   return (

@@ -49,15 +49,7 @@ const Projects = () => {
       link: "https://site-manger.vercel.app/account",
       tags: ["React", "Dashboard UI"],
     },
-    {
-      id: 1,
-      title: "Modern Design Agency Website",
-      description:
-        "A sophisticated agency website that combines stunning visuals with seamless functionality. Features include dynamic content loading, smooth scroll animations, and interactive portfolio displays. Built with modern web technologies to deliver an immersive user experience.",
-      image: "/refukuss.jpg",
-      link: "https://refokuss-designs.vercel.app/",
-      tags: ["React", "GSAP", "Tailwind CSS"],
-    },
+
     {
       id: 5,
       title: "Creative Professional Showcase",

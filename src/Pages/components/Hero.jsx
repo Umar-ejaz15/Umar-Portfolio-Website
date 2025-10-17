@@ -5,7 +5,6 @@ import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 import { Particles } from "@/components/magicui/particles";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import React from "react";
@@ -48,7 +47,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.3 }}
             >
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-light text-zinc-300 mb-8">
-                <TypingAnimation text="Into Digital Reality" />
+             into Digital Reality
               </h2>
             </motion.div>
           </BoxReveal>
