@@ -40,17 +40,7 @@ const Hero = () => {
               </AnimatedGradientText>
             </motion.h1>
           </BoxReveal>
-          <BoxReveal>
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-light text-zinc-300 mb-8">
-             into Digital Reality
-              </h2>
-            </motion.div>
-          </BoxReveal>
+       
           <BoxReveal>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
